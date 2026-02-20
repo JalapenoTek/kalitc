@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Technology Consulting, LLC | Enterprise MSP Solutions</title>
+    <meta name="description" content="Kali Technology Consulting, LLC - Your trusted MSP consulting partner providing telecom, cloud, cybersecurity, and managed services from 200+ leading technology providers.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">Kali Technology Consulting<span>, LLC</span></div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="partners.html">Partners</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="nav-cta">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="hero-grid"></div>
+        
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-certificate"></i>
+                        Trusted MSP Technology Consultant
+                    </div>
+                    
+                    <h1>
+                        Enterprise Technology <span class="text-gradient">Solutions Provider</span>
+                    </h1>
+                    
+                    <p>
+                        Kali Technology Consulting, LLC delivers best-in-class MSP services, telecom solutions, 
+                        cloud infrastructure, and cybersecurity backed by over 200 leading technology providers.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Get Started
+                        </a>
+                        <a href="services.html" class="btn btn-secondary">
+                            <i class="fas fa-th-large"></i> Our Solutions
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">200<span>+</span></div>
+                            <div class="hero-stat-label">Technology Providers</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">24<span>/7</span></div>
+                            <div class="hero-stat-label">Expert Support</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">99.9<span>%</span></div>
+                            <div class="hero-stat-label">Service Uptime</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="padding: 20px; background: rgba(0,112,184,0.1); border-radius: 12px; text-align: center;">
+                                <i class="fas fa-network-wired" style="font-size: 2rem; color: #3399d6; margin-bottom: 8px;"></i>
+                                <div style="font-size: 0.85rem; font-weight: 600; color: #fff;">Network & Voice</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8;">SD-WAN, MPLS, SIP</div>
+                            </div>
+                            <div style="padding: 20px; background: rgba(14,165,233,0.1); border-radius: 12px; text-align: center;">
+                                <i class="fas fa-cloud" style="font-size: 2rem; color: #38bdf8; margin-bottom: 8px;"></i>
+                                <div style="font-size: 0.85rem; font-weight: 600; color: #fff;">Cloud Computing</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8;">AWS, Azure, GCP</div>
+                            </div>
+                            <div style="padding: 20px; background: rgba(245,158,11,0.1); border-radius: 12px; text-align: center;">
+                                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #fbbf24; margin-bottom: 8px;"></i>
+                                <div style="font-size: 0.85rem; font-weight: 600; color: #fff;">Cybersecurity</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8;">SIEM, SOC, Zero Trust</div>
+                            </div>
+                            <div style="padding: 20px; background: rgba(16,185,129,0.1); border-radius: 12px; text-align: center;">
+                                <i class="fas fa-headset" style="font-size: 2rem; color: #34d399; margin-bottom: 8px;"></i>
+                                <div style="font-size: 0.85rem; font-weight: 600; color: #fff;">UC & Collaboration</div>
+                                <div style="font-size: 0.75rem; color: #94a3b8;">Teams, Zoom, RingCentral</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px; padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f59e0b, #f97316); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-handshake" style="color: #fff;"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.85rem; font-weight: 600; color: #fff;">Kali Technology Consulting Partner Network</div>
+                                    <div style="font-size: 0.75rem; color: #94a3b8;">200+ enterprise technology providers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kali Technology Consulting Value Banner -->
+    <section style="background: linear-gradient(135deg, #0a1e3d, #0d2f5e); padding: 40px 0; position: relative; overflow: hidden;">
+        <div class="container" style="text-align: center;">
+            <div class="hero-badge reveal" style="margin-bottom: 16px;">
+                <i class="fas fa-award"></i> Your Trusted Technology Partner
+            </div>
+            <p class="reveal" style="color: #94a3b8; max-width: 700px; margin: 0 auto; font-size: 1rem;">
+                Kali Technology Consulting, LLC provides access to over 200 diverse technology suppliers 
+                with preferential pricing and terms — delivering enterprise-grade solutions tailored to your business.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section section-dark" id="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">
+                    <i class="fas fa-th-large"></i> Solution Categories
+                </div>
+                <h2 class="reveal">One-Stop Technology Solutions</h2>
+                <p class="reveal">Comprehensive solutions across every category of enterprise technology</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network & Voice</h3>
+                    <p>Enterprise-grade networking solutions including SD-WAN, MPLS, fiber, SIP trunking, and dedicated internet access from top-tier carriers.</p>
+                    <div class="service-features">
+                        <span class="service-feature">SD-WAN</span>
+                        <span class="service-feature">MPLS</span>
+                        <span class="service-feature">Fiber</span>
+                        <span class="service-feature">SIP</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>UC & Collaboration</h3>
+                    <p>Unified communications platforms that bring together voice, video, messaging, and collaboration tools for seamless teamwork.</p>
+                    <div class="service-features">
+                        <span class="service-feature">UCaaS</span>
+                        <span class="service-feature">Video</span>
+                        <span class="service-feature">Messaging</span>
+                        <span class="service-feature">VoIP</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon amber">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Contact Center</h3>
+                    <p>Cloud-based contact center solutions with AI-powered routing, analytics, and omnichannel customer engagement capabilities.</p>
+                    <div class="service-features">
+                        <span class="service-feature">CCaaS</span>
+                        <span class="service-feature">AI Routing</span>
+                        <span class="service-feature">Analytics</span>
+                        <span class="service-feature">Omnichannel</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions including SIEM, SOC, endpoint protection, zero trust architecture, and compliance management.</p>
+                    <div class="service-features">
+                        <span class="service-feature">SIEM</span>
+                        <span class="service-feature">SOC</span>
+                        <span class="service-feature">Zero Trust</span>
+                        <span class="service-feature">EDR</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Computing</h3>
+                    <p>Multi-cloud strategies with AWS, Azure, and GCP expertise. Cloud migration, optimization, and managed cloud services.</p>
+                    <div class="service-features">
+                        <span class="service-feature">AWS</span>
+                        <span class="service-feature">Azure</span>
+                        <span class="service-feature">GCP</span>
+                        <span class="service-feature">Hybrid</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon amber">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Mobility, IoT & AI</h3>
+                    <p>Next-generation mobility solutions, IoT connectivity platforms, and AI-powered business intelligence tools.</p>
+                    <div class="service-features">
+                        <span class="service-feature">5G</span>
+                        <span class="service-feature">IoT</span>
+                        <span class="service-feature">AI/ML</span>
+                        <span class="service-feature">Edge</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Managed Services</h3>
+                    <p>Full-spectrum managed IT services with 24/7 monitoring, proactive maintenance, help desk, and strategic IT planning.</p>
+                    <div class="service-features">
+                        <span class="service-feature">NOC</span>
+                        <span class="service-feature">Help Desk</span>
+                        <span class="service-feature">Monitoring</span>
+                        <span class="service-feature">vCIO</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon blue">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>SD-WAN</h3>
+                    <p>Software-defined wide area networking for optimized connectivity, application performance, and cost reduction across locations.</p>
+                    <div class="service-features">
+                        <span class="service-feature">SASE</span>
+                        <span class="service-feature">Optimization</span>
+                        <span class="service-feature">Multi-site</span>
+                        <span class="service-feature">QoS</span>
+                    </div>
+                    <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;" class="reveal">
+                <a href="services.html" class="btn btn-primary">
+                    <i class="fas fa-th-large"></i> View All Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Partners Marquee -->
+    <section class="section" style="background: #fff; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 32px;">
+                <div class="section-badge reveal">
+                    <i class="fas fa-handshake"></i> Technology Partners
+                </div>
+                <h2 class="reveal" style="color: #0f172a;">Trusted by Leading Providers</h2>
+                <p class="reveal">Access to 200+ best-in-class technology providers through our partner network</p>
+            </div>
+        </div>
+        <div style="overflow: hidden; white-space: nowrap; padding: 20px 0;">
+            <div class="marquee-track" style="display: inline-flex; gap: 32px; align-items: center;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424271321-35LSY39INB559HIKDIA6/att_biz_hz_alt_4cp_pos.gif" alt="AT&T" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561438893325-L9MC2NCAF74U2B95BEA9/comcast_business.png" alt="Comcast Business" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425795331-W4T3AQQ0ENDLR15SWLB7/RingCentral.gif" alt="RingCentral" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437053538-F6CNBUKZ3N9U69KSEN0F/avant-Verizon-logo_1.png" alt="Verizon" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424942318-V6A5KRUYFJCUT0NUHWDM/Equinix.gif" alt="Equinix" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425770079-KSIQWZ5ND3PFZOIVWSGL/Rackspace_Wordmark_Red.gif" alt="Rackspace" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746707-WG61EDES4DUMKA8LZMG7/Nextiva-Logo_220.gif" alt="Nextiva" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424802043-ZFZCCGOU0XGLK2KKI2TF/Dialpad_Navy.gif" alt="Dialpad" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746788-3ZGA16Y4154X6RDFUC6I/NICE_inContact.gif" alt="NICE inContact" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965479-VEMBRFHMA01AJ47OA7V2/flexential-logo.gif" alt="Flexential" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425115660-PT7SUUWCQEIA7W08PUD6/GTT_logo_PMS.gif" alt="GTT" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425880149-KBE7IZ3I7KJYUC47VRT2/Sprint_PP_HighRes-220.gif" alt="Sprint" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425944184-LHMR3EJX89GMCMSO6EKF/TPX_Communications_logo_wide_TM.gif" alt="TPx" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425960279-2GCTF8KEGIYERV94DDOO/zayo.gif" alt="Zayo" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965447-2HID0HNX4EMMGN9IBLDJ/Five9_logo_primary_RGB220.gif" alt="Five9" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425944671-N3H3UIKVT8G6E84DXJJY/VONAGE.gif" alt="Vonage" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425115413-VDO4DKIH831HJ8IVS9V6/granite.gif" alt="Granite" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746927-NYZO6Q8CFBC8884P8GMZ/NTT.gif" alt="NTT" style="height: 40px; filter: grayscale(100%); opacity: 0.5;">
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 24px;">
+            <a href="partners.html" class="btn btn-outline">
+                <i class="fas fa-th"></i> View All 200+ Partners
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Stats -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge reveal">
+                    <i class="fas fa-star"></i> Why Kali Technology Consulting
+                </div>
+                <h2 class="reveal">The Power of Best-In-Class</h2>
+                <p class="reveal">With over 200 diverse technology suppliers, we negotiate the best terms and deliver the industry's finest solutions</p>
+            </div>
+            
+            <div class="stats-row" style="margin-bottom: 64px;">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Technology Providers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Solution Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Vendor Neutral</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Expert Support</div>
+                </div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <h2 style="color: #fff;">Leading Solutions,<br>Your Trusted Partner</h2>
+                    <p style="color: #94a3b8;">
+                        Tap into our extensive provider network to access solutions that work with your unique situation. 
+                        Mix and match for optimal results, knowing you won't sacrifice support or be trapped by terms.
+                    </p>
+                    <p style="color: #94a3b8;">
+                        Our team has your back — providing the support, solutions and services you need, when you need them 
+                        and at a preferred price point — from Cloud and Cybersecurity to IT and telecom.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff;">Preferential Pricing</h4>
+                                <p style="color: #94a3b8;">Leverage our network for the best rates and terms</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff;">Vendor-Neutral Advice</h4>
+                                <p style="color: #94a3b8;">Unbiased recommendations tailored to your needs</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff;">Single Point of Contact</h4>
+                                <p style="color: #94a3b8;">One partner for all your technology needs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="stat-card">
+                            <i class="fas fa-network-wired" style="font-size: 2rem; color: #3399d6; margin-bottom: 12px;"></i>
+                            <div style="font-weight: 600; color: #fff; margin-bottom: 4px;">Network & Voice</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8;">50+ providers</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-cloud" style="font-size: 2rem; color: #38bdf8; margin-bottom: 12px;"></i>
+                            <div style="font-weight: 600; color: #fff; margin-bottom: 4px;">Cloud Solutions</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8;">40+ providers</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #fbbf24; margin-bottom: 12px;"></i>
+                            <div style="font-weight: 600; color: #fff; margin-bottom: 4px;">Cybersecurity</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8;">30+ providers</div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-headset" style="font-size: 2rem; color: #34d399; margin-bottom: 12px;"></i>
+                            <div style="font-weight: 600; color: #fff; margin-bottom: 4px;">Contact Center</div>
+                            <div style="font-size: 0.8rem; color: #94a3b8;">25+ providers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="section section-dark" style="background:linear-gradient(135deg,#0a1e3d,#0f172a);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom:48px;">
+                <div class="section-badge reveal">
+                    <i class="fas fa-industry"></i> Industries We Serve
+                </div>
+                <h2 class="reveal">Trusted Across Every Sector</h2>
+                <p class="reveal">We deliver tailored technology solutions for organizations across a wide range of industries</p>
+            </div>
+
+            <div style="position:relative;">
+                <!-- Left Arrow -->
+                <button onclick="scrollOneCard('left')" style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;background:rgba(0,112,184,0.9);border:none;border-radius:50%;color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.3);user-select:none;" onmouseover="this.style.background='#0088d9';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(0,112,184,0.9)';this.style.transform='translateY(-50%) scale(1)'">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Right Arrow -->
+                <button onclick="scrollOneCard('right')" style="position:absolute;right:-20px;top:50%;transform:translateY(-50%);z-index:10;width:40px;height:40px;background:rgba(0,112,184,0.9);border:none;border-radius:50%;color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.3);user-select:none;" onmouseover="this.style.background='#0088d9';this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(0,112,184,0.9)';this.style.transform='translateY(-50%) scale(1)'">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Scrollable Container -->
+                <div id="industries-scroll" style="display:flex;gap:24px;overflow-x:hidden;scroll-behavior:smooth;padding:0 20px;">
+                    <!-- Medical -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(239,68,68,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-heartbeat" style="font-size:1.5rem;color:#ef4444;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Medical</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">HIPAA-compliant infrastructure & telehealth solutions for healthcare providers.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ophthalmology -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(14,165,233,0.2),rgba(14,165,233,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-eye" style="font-size:1.5rem;color:#38bdf8;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Ophthalmology</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Specialized IT solutions for vision care practices and diagnostic equipment.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dermatology -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(16,185,129,0.2),rgba(16,185,129,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-user-md" style="font-size:1.5rem;color:#34d399;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Dermatology</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Secure networks and imaging solutions with HIPAA-compliant photo storage.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Civil Engineering -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(245,158,11,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-hard-hat" style="font-size:1.5rem;color:#fbbf24;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Civil Engineering</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Robust connectivity solutions for field operations and CAD support.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supported Living -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(168,85,247,0.2),rgba(168,85,247,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-home" style="font-size:1.5rem;color:#a855f7;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Supported Living</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Secure technology solutions for assisted living and care facilities.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Franchise Support -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(236,72,153,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-store" style="font-size:1.5rem;color:#ec4899;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Franchise Support</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Scalable IT solutions for multi-location franchise operations.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retail -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(34,197,94,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-shopping-cart" style="font-size:1.5rem;color:#22c55e;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Retail</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">POS systems, inventory management, and customer experience technology.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Broadcasting -->
+                    <div class="industry-card reveal" style="position:relative;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);overflow:hidden;cursor:pointer;min-width:350px!important;max-width:350px!important;width:350px!important;flex-shrink:0!important;backdrop-filter:blur(10px);box-sizing:border-box!important;" 
+                         onmouseenter="
+                             this.style.transform='translateY(-8px)';
+                             this.style.boxShadow='0 20px 40px rgba(0,112,184,0.3)';
+                             this.style.background='rgba(255,255,255,0.08)';
+                             this.style.borderColor='rgba(0,112,184,0.3)';
+                         "
+                         onmouseleave="
+                             this.style.transform='translateY(0)';
+                             this.style.boxShadow='none';
+                             this.style.background='rgba(255,255,255,0.05)';
+                             this.style.borderColor='rgba(255,255,255,0.1)';
+                         ">
+                        <div style="padding:36px;position:relative;overflow:hidden;box-sizing:border-box!important;">
+                            <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0070b8,#00a8ff);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;"></div>
+                            <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(59,130,246,0.1));border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all 0.3s ease;">
+                                <i class="fas fa-broadcast-tower" style="font-size:1.5rem;color:#3b82f6;"></i>
+                            </div>
+                            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:12px;font-weight:600;">Broadcasting</h3>
+                            <p style="color:#94a3b8;font-size:0.95rem;line-height:1.7;margin-bottom:16px;">Live streaming, broadcast infrastructure, and media production systems.</p>
+                            <div class="learn-more" style="opacity:1;transform:translateY(0);transition:all 0.3s ease;">
+                                <a href="#" style="color:#0070b8;font-size:0.85rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all 0.3s ease;" onmouseover="this.style.color='#0088d9'; this.style.transform='translateX(4px)'; this.querySelector('i').style.transform='translateX(2px)'" onmouseout="this.style.color='#0070b8'; this.style.transform='translateX(0)'; this.querySelector('i').style.transform='translateX(0)'">
+                                    Learn more <i class="fas fa-arrow-right" style="font-size:0.75rem;transition:transform 0.3s ease;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            let currentCardIndex = 0;
+            const cardWidth = 350;
+            const cardGap = 24;
+            const scrollAmount = cardWidth + cardGap; // 374px
+
+            function scrollOneCard(direction) {
+                const container = document.getElementById('industries-scroll');
+                const cards = container.querySelectorAll('.industry-card');
+                const totalCards = cards.length;
+                
+                if (direction === 'left') {
+                    currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+                } else {
+                    currentCardIndex = (currentCardIndex + 1) % totalCards;
+                }
+                
+                // Calculate target scroll position
+                const targetScrollLeft = currentCardIndex * scrollAmount;
+                
+                // Smooth scroll to target position
+                container.scrollTo({
+                    left: targetScrollLeft,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Fallback function for compatibility
+            function scrollIndustries(direction) {
+                scrollOneCard(direction);
+            }
+
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const container = document.getElementById('industries-scroll');
+                if (container) {
+                    // Clone cards for seamless looping
+                    const originalCards = container.querySelectorAll('.industry-card');
+                    const cardsArray = Array.from(originalCards);
+                    
+                    // Clone all cards and append to container for infinite loop effect
+                    cardsArray.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        container.appendChild(clone);
+                    });
+                    
+                    // Set initial position
+                    container.scrollLeft = 0;
+                    
+                    // Re-attach hover effects to all cards (including clones)
+                    attachHoverEffects();
+                }
+            });
+
+            function attachHoverEffects() {
+                // Add hover effects for top bar animation and icon rotation only
+                document.querySelectorAll('.industry-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        // Be very specific with selectors to avoid affecting learn-more links
+                        const cardInner = card.querySelector('div[style*="padding:36px"]');
+                        if (cardInner) {
+                            const topBar = cardInner.querySelector('div[style*="position:absolute"]');
+                            const icon = cardInner.querySelector('div[style*="width:56px"]');
+                            
+                            if (topBar) {
+                                topBar.style.transform = 'scaleX(1)';
+                            }
+                            if (icon) {
+                                icon.style.transform = 'scale(1.1) rotate(5deg)';
+                            }
+                        }
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        // Be very specific with selectors to avoid affecting learn-more links
+                        const cardInner = card.querySelector('div[style*="padding:36px"]');
+                        if (cardInner) {
+                            const topBar = cardInner.querySelector('div[style*="position:absolute"]');
+                            const icon = cardInner.querySelector('div[style*="width:56px"]');
+                            
+                            if (topBar) {
+                                topBar.style.transform = 'scaleX(0)';
+                            }
+                            if (icon) {
+                                icon.style.transform = 'scale(1) rotate(0deg)';
+                            }
+                        }
+                    });
+                });
+            }
+            </script>
+        </div>
+    </section>
+
+    
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">Ready to Transform Your Technology?</h2>
+            <p class="reveal">
+                Let Kali Technology Consulting, LLC connect you with the perfect solutions from 200+ leading providers.
+            </p>
+            <a href="contact.html" class="btn btn-white reveal">
+                <i class="fas fa-paper-plane"></i> Get Your Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 12px;">
+                        <div class="nav-logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+                    </a>
+                    <p>
+                        Kali Technology Consulting, LLC — your trusted MSP technology consultant, 
+                        providing enterprise technology solutions from 200+ leading providers.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Network & Voice</a></li>
+                        <li><a href="services.html">Cloud Computing</a></li>
+                        <li><a href="services.html">Cybersecurity</a></li>
+                        <li><a href="services.html">UC & Collaboration</a></li>
+                        <li><a href="services.html">Contact Center</a></li>
+                        <li><a href="services.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="partners.html">Our Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://kalitc.io" target="_blank"><i class="fas fa-globe" style="margin-right: 8px; color: #3399d6;"></i>kalitc.io</a></li>
+                        <li><a href="mailto:info@kalitc.io"><i class="fas fa-envelope" style="margin-right: 8px; color: #3399d6;"></i>info@kalitc.io</a></li>
+                        <li><a href="tel:+16197595900"><i class="fas fa-phone" style="margin-right: 8px; color: #3399d6;"></i>(619) 759-5900</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #3399d6;"></i>880 Canarios Ct #230, Chula Vista, CA</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Kali Technology Consulting, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

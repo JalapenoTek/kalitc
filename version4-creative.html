@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Technology Consulting LLC - Version 4: Creative Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .creative-gradient {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .text-creative {
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: text-gradient 8s ease infinite;
+        }
+        
+        @keyframes text-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .portfolio-card {
+            background: white;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .portfolio-card:hover::before {
+            opacity: 1;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-creative {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-creative {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-creative::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn-creative:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .shape-decoration {
+            position: absolute;
+            opacity: 0.1;
+            animation: float-shape 20s infinite ease-in-out;
+        }
+        
+        @keyframes float-shape {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+        
+        .service-icon-creative {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon-creative::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-card:hover .service-icon-creative::before {
+            opacity: 1;
+        }
+        
+        .portfolio-card:hover .service-icon-creative {
+            transform: rotate(5deg) scale(1.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 120px;
+            opacity: 0.1;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .stats-number {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 1;
+        }
+        
+        .creative-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .creative-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+    <!-- Decorative Shapes -->
+    <div class="shape-decoration w-64 h-64 creative-gradient rounded-full top-20 left-10"></div>
+    <div class="shape-decoration w-96 h-96 creative-gradient rounded-full bottom-20 right-10" style="animation-delay: -7s;"></div>
+    <div class="shape-decoration w-48 h-48 creative-gradient rounded-full top-1/2 left-1/3" style="animation-delay: -14s;"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 nav-creative transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 creative-gradient rounded-2xl flex items-center justify-center transform rotate-12">
+                        <i class="fas fa-palette text-white text-xl -rotate-12"></i>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Kali Technology</div>
+                        <div class="text-xs text-gray-600">Creative Consulting</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium transition">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 font-medium transition">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-block px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full text-purple-600 font-semibold mb-8 shadow-lg">
+                    ✨ Crafting Digital Experiences Since 2009
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                    <span class="text-creative">Kali Technology</span><br>
+                    <span class="text-gray-900">Consulting</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed font-light">
+                    Where innovation meets imagination. We transform businesses through 
+                    creative technology solutions, stunning design, and unparalleled expertise.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                    <button class="btn-creative creative-gradient text-white px-10 py-5 rounded-full font-semibold text-lg shadow-xl">
+                        Start Your Journey
+                    </button>
+                    <button class="btn-creative bg-white text-purple-600 px-10 py-5 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl">
+                        Explore Our Work
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">500+</div>
+                        <div class="text-gray-600 font-medium">Happy Clients</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">24/7</div>
+                        <div class="text-gray-600 font-medium">Creative Support</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">99.9%</div>
+                        <div class="text-gray-600 font-medium">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 creative-section">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    Our <span class="text-creative">Creative</span> Services
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto font-light">
+                    Innovative solutions designed to inspire and transform your business
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">MSP Services</h3>
+                    <p class="text-gray-600 mb-6 font-light">Imaginative managed services that bring your IT infrastructure to life with creative solutions.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Discover Magic</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-satellite-dish text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Telecom Artistry</h3>
+                    <p class="text-gray-600 mb-6 font-light">Connecting your world with beautifully crafted communication solutions.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Explore Possibilities</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fab fa-microsoft text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Microsoft 365</h3>
+                    <p class="text-gray-600 mb-6 font-light">Transforming productivity with creative Microsoft solutions.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Unlock Potential</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Cloud Dreams</h3>
+                    <p class="text-gray-600 mb-6 font-light">Building cloud solutions that reach for the stars.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Soar Higher</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">SaaS Innovation</h3>
+                    <p class="text-gray-600 mb-6 font-light">Crafting software solutions that inspire and delight.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Create Wonder</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hardware Excellence</h3>
+                    <p class="text-gray-600 mb-6 font-light">Premium hardware solutions with artistic precision.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Build Perfect</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Talent Symphony</h3>
+                    <p class="text-gray-600 mb-6 font-light">Orchestrating perfect teams for your success.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Find Harmony</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Security Art</h3>
+                    <p class="text-gray-600 mb-6 font-light">Painting digital fortresses with creative security.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Protect Beauty</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card p-8 rounded-3xl shadow-lg">
+                    <div class="service-icon-creative mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Creative Consulting</h3>
+                    <p class="text-gray-600 mb-6 font-light">Strategic vision painted with innovation.</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        <span>Imagine Future</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white/50 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-8">
+                    Our <span class="text-creative">Creative</span> Story
+                </h2>
+                <p class="text-xl text-gray-700 mb-12 font-light leading-relaxed">
+                    Kali Technology Consulting LLC was born from a passion for blending technology with creativity. 
+                    For over 15 years, we've been transforming businesses not just with solutions, but with experiences 
+                    that inspire, delight, and drive success. Our team of 50+ creative technologists brings art to the 
+                    world of IT.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">15+</div>
+                        <div class="text-gray-600 font-medium">Years of Art</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">50+</div>
+                        <div class="text-gray-600 font-medium">Creative Minds</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">100+</div>
+                        <div class="text-gray-600 font-medium">Dream Partners</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stats-number text-creative mb-2">24/7</div>
+                        <div class="text-gray-600 font-medium">Inspiration</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-3xl shadow-xl text-left">
+                    <p class="text-xl mb-6 font-light italic">
+                        "We don't just solve problems; we create possibilities. Every project is a canvas, 
+                        every solution a masterpiece. That's the Kali Technology difference."
+                    </p>
+                    <div class="text-right">
+                        <div class="font-semibold">The Creative Team</div>
+                        <div class="text-sm opacity-80">Kali Technology Consulting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-8">
+                    Let's Create <span class="text-creative">Together</span>
+                </h2>
+                <p class="text-xl text-gray-700 mb-12 font-light">
+                    Ready to transform your business into a work of art? Let's start the conversation.
+                </p>
+                
+                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="text-left">
+                            <div class="text-purple-600 font-semibold mb-1">🎨 Creative Studio</div>
+                            <div class="text-gray-900">www.kalitc.io</div>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-purple-600 font-semibold mb-1">✉️ Design Mail</div>
+                            <div class="text-gray-900">info@kalitc.io</div>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-purple-600 font-semibold mb-1">📱 Inspiration Line</div>
+                            <div class="text-gray-900">+1 (555) 123-4567</div>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-purple-600 font-semibold mb-1">🌟 Creative Hours</div>
+                            <div class="text-gray-900">24/7 Inspiration</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-creative creative-gradient text-white px-10 py-4 rounded-full font-semibold text-lg w-full shadow-xl">
+                        Begin Your Creative Journey
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-12 h-12 creative-gradient rounded-2xl flex items-center justify-center transform rotate-12">
+                    <i class="fas fa-palette text-white text-xl -rotate-12"></i>
+                </div>
+                <div>
+                    <div class="text-xl font-bold">Kali Technology</div>
+                    <div class="text-sm opacity-80">Creative Consulting LLC</div>
+                </div>
+            </div>
+            <p class="opacity-90 mb-4">
+                Where Technology Meets Artistry
+            </p>
+            <p class="text-sm opacity-70">
+                © 2024 Kali Technology Consulting LLC. All rights reserved. | Crafted with ❤️ and Creativity
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero animations with creative flair
+        gsap.timeline()
+            .from("#home .bg-white\\/80", { duration: 1, scale: 0, rotation: 180, ease: "back.out(1.7)" })
+            .from("#home h1", { duration: 1.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.5")
+            .from("#home p", { duration: 1.2, y: 50, opacity: 0, ease: "power3.out" }, "-=0.8")
+            .from("#home .flex.gap-6", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+            .from("#home .grid", { duration: 1, scale: 0.8, opacity: 0, ease: "back.out(1.7)" }, "-=0.4");
+        
+        // Floating shapes animation
+        gsap.to(".shape-decoration", {
+            rotation: 360,
+            duration: 20,
+            repeat: -1,
+            ease: "none",
+            stagger: 5
+        });
+        
+        // Portfolio cards with creative entrance
+        gsap.utils.toArray(".portfolio-card").forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%"
+                },
+                scale: 0,
+                rotation: 15,
+                opacity: 0,
+                duration: 1,
+                delay: index * 0.15,
+                ease: "back.out(1.7)"
+            });
+        });
+        
+        // Creative text gradient animation
+        gsap.to(".text-creative", {
+            backgroundPosition: "200% 50%",
+            duration: 8,
+            repeat: -1,
+            ease: "none"
+        });
+        
+        // Stats numbers animation
+        gsap.utils.toArray(".stats-number").forEach(stat => {
+            gsap.from(stat, {
+                scrollTrigger: {
+                    trigger: stat,
+                    start: "top 80%"
+                },
+                scale: 0,
+                opacity: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)"
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Navbar creative scroll effect
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("shadow-2xl", "shadow-purple-200/50");
+            } else {
+                navbar.classList.remove("shadow-2xl", "shadow-purple-200/50");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Technology Consulting LLC - Version 3: Corporate Professional</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+        }
+        
+        .corporate-blue {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .corporate-gold {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+        }
+        
+        .corporate-gray {
+            background: linear-gradient(135deg, #374151 0%, #6b7280 100%);
+        }
+        
+        .professional-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .professional-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #3b82f6);
+            transition: left 0.5s ease;
+        }
+        
+        .professional-card:hover::before {
+            left: 0;
+        }
+        
+        .professional-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-corporate {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-corporate {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-corporate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-number {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+        }
+        
+        .testimonial-card {
+            background: #f9fafb;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: #3b82f6;
+            border: 3px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 nav-corporate transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 corporate-blue rounded-lg flex items-center justify-center">
+                        <i class="fas fa-building text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold text-gray-900">Kali Technology</div>
+                        <div class="text-xs text-gray-600">Consulting LLC</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition">Services</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold mb-6">
+                        ESTABLISHED 2009 | ISO 9001:2015 CERTIFIED
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Enterprise Technology<br>
+                        <span class="corporate-blue text-transparent bg-clip-text">Solutions Provider</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Kali Technology Consulting LLC delivers comprehensive managed services, 
+                        telecommunications solutions, and strategic IT consulting to enterprises worldwide. 
+                        Trusted by over 500 clients for reliable, secure, and scalable technology infrastructure.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button class="btn-corporate corporate-blue text-white px-8 py-4 rounded-lg font-semibold">
+                            Schedule Consultation
+                        </button>
+                        <button class="btn-corporate border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400">
+                            Download Brochure
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-8">
+                        <div>
+                            <div class="stat-number text-3xl text-blue-600 mb-1">500+</div>
+                            <div class="text-sm text-gray-600">Enterprise Clients</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-3xl text-blue-600 mb-1">24/7</div>
+                            <div class="text-sm text-gray-600">Support Coverage</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-3xl text-blue-600 mb-1">99.9%</div>
+                            <div class="text-sm text-gray-600">Service Uptime</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-4 bg-blue-50 rounded-lg">
+                                <i class="fas fa-award text-blue-600 text-3xl mb-2"></i>
+                                <div class="text-sm font-semibold text-gray-700">15+ Years</div>
+                                <div class="text-xs text-gray-600">Experience</div>
+                            </div>
+                            <div class="text-center p-4 bg-amber-50 rounded-lg">
+                                <i class="fas fa-users text-amber-600 text-3xl mb-2"></i>
+                                <div class="text-sm font-semibold text-gray-700">50+ Experts</div>
+                                <div class="text-xs text-gray-600">Certified</div>
+                            </div>
+                            <div class="text-center p-4 bg-green-50 rounded-lg">
+                                <i class="fas fa-handshake text-green-600 text-3xl mb-2"></i>
+                                <div class="text-sm font-semibold text-gray-700">100+</div>
+                                <div class="text-xs text-gray-600">Partners</div>
+                            </div>
+                            <div class="text-center p-4 bg-purple-50 rounded-lg">
+                                <i class="fas fa-globe text-purple-600 text-3xl mb-2"></i>
+                                <div class="text-sm font-semibold text-gray-700">Global</div>
+                                <div class="text-xs text-gray-600">Reach</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                            <div class="text-sm font-semibold text-gray-700 mb-2">Certifications & Partnerships</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white rounded text-xs text-gray-600">Microsoft Gold</span>
+                                <span class="px-2 py-1 bg-white rounded text-xs text-gray-600">Cisco</span>
+                                <span class="px-2 py-1 bg-white rounded text-xs text-gray-600">AWS</span>
+                                <span class="px-2 py-1 bg-white rounded text-xs text-gray-600">CompTIA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="section-divider mb-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Our Services
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive technology solutions designed to meet the demanding needs of modern enterprises
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Managed Services Provider</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive IT infrastructure management with proactive monitoring, maintenance, and 24/7 support.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Proactive System Monitoring</li>
+                        <li>• Security Management</li>
+                        <li>• Backup & Disaster Recovery</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-gold rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-satellite-dish text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Telecom Solutions</h3>
+                    <p class="text-gray-600 mb-4">End-to-end telecommunications services including voice, data, and network infrastructure.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Voice & Data Services</li>
+                        <li>• Fiber Optic Solutions</li>
+                        <li>• VoIP Implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fab fa-microsoft text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Microsoft 365</h3>
+                    <p class="text-gray-600 mb-4">Complete Microsoft 365 deployment, migration, and management services.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Migration Services</li>
+                        <li>• License Management</li>
+                        <li>• Security & Compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-gold rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-4">Scalable cloud infrastructure and migration services for AWS, Azure, and hybrid environments.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Cloud Migration</li>
+                        <li>• Infrastructure as Code</li>
+                        <li>• Cost Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">SaaS Solutions</h3>
+                    <p class="text-gray-600 mb-4">Custom SaaS development and integration with existing business systems.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Custom Development</li>
+                        <li>• API Integration</li>
+                        <li>• Analytics & Reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-gold rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Hardware Reseller</h3>
+                    <p class="text-gray-600 mb-4">Premium hardware solutions from leading manufacturers with installation and support.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Enterprise Hardware</li>
+                        <li>• Network Equipment</li>
+                        <li>• Warranty & Support</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Staffing Services</h3>
+                    <p class="text-gray-600 mb-4">Professional IT staffing solutions with pre-vetted talent for all positions.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Contract Staffing</li>
+                        <li>• Permanent Placement</li>
+                        <li>• Managed Services</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-gold rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cybersecurity</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive security assessments and ongoing security monitoring.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Security Audits</li>
+                        <li>• Threat Detection</li>
+                        <li>• Compliance Management</li>
+                    </ul>
+                </div>
+                
+                <div class="professional-card p-8 rounded-xl">
+                    <div class="w-14 h-14 corporate-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">IT Consulting</h3>
+                    <p class="text-gray-600 mb-4">Strategic IT planning and digital transformation consulting.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Digital Strategy</li>
+                        <li>• Process Optimization</li>
+                        <li>• Technology Roadmap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="section-divider mb-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+                    About Kali Technology Consulting
+                </h2>
+                <p class="text-xl text-gray-600 mb-12 text-center leading-relaxed">
+                    Since 2009, Kali Technology Consulting LLC has been a trusted partner for enterprises seeking 
+                    reliable, secure, and innovative technology solutions. Our team of certified professionals delivers 
+                    exceptional service and measurable results.
+                </p>
+                
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="stat-number text-4xl text-blue-600 mb-2">15+</div>
+                        <div class="text-sm font-semibold text-gray-700">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stat-number text-4xl text-blue-600 mb-2">50+</div>
+                        <div class="text-sm font-semibold text-gray-700">Certified Experts</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stat-number text-4xl text-blue-600 mb-2">100+</div>
+                        <div class="text-sm font-semibold text-gray-700">Technology Partners</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="stat-number text-4xl text-blue-600 mb-2">24/7</div>
+                        <div class="text-sm font-semibold text-gray-700">Support Available</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Commitment to Excellence</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 corporate-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Quality Assurance</h4>
+                                <p class="text-gray-600">ISO 9001:2015 certified processes ensure consistent quality delivery.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 corporate-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Customer Focus</h4>
+                                <p class="text-gray-600">Dedicated account managers and personalized service for every client.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 corporate-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Innovation</h4>
+                                <p class="text-gray-600">Continuous investment in emerging technologies and best practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="section-divider mb-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+                    Contact Us
+                </h2>
+                <p class="text-xl text-gray-600 mb-12 text-center">
+                    Ready to transform your business technology? Let's discuss your requirements.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 corporate-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-globe text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Website</div>
+                                    <div class="text-gray-600">www.kalitc.io</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 corporate-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Email</div>
+                                    <div class="text-gray-600">info@kalitc.io</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 corporate-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Phone</div>
+                                    <div class="text-gray-600">+1 (555) 123-4567</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 corporate-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Business Hours</div>
+                                    <div class="text-gray-600">24/7 Support Available</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Request Consultation</h3>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Full Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <input type="text" placeholder="Company Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <textarea placeholder="Tell us about your requirements" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                            <button type="submit" class="btn-corporate corporate-blue text-white px-8 py-3 rounded-lg font-semibold w-full">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 corporate-blue rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-white"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold">Kali Technology</div>
+                            <div class="text-xs text-gray-400">Consulting LLC</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Your trusted partner for enterprise technology solutions and managed services.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Managed Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cybersecurity</a></li>
+                        <li><a href="#" class="hover:text-white transition">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Partners</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2024 Kali Technology Consulting LLC. All rights reserved. | ISO 9001:2015 Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero animations
+        gsap.timeline()
+            .from("#home .inline-block", { duration: 1, y: 30, opacity: 0, ease: "power3.out" })
+            .from("#home h1", { duration: 1.2, y: 50, opacity: 0, ease: "power3.out" }, "-=0.5")
+            .from("#home p", { duration: 1, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+            .from("#home .flex.gap-4", { duration: 0.8, y: 20, opacity: 0, ease: "power3.out" }, "-=0.4")
+            .from("#home .grid", { duration: 0.8, y: 20, opacity: 0, ease: "power3.out" }, "-=0.3")
+            .from("#home .relative > div", { duration: 1, scale: 0.9, opacity: 0, ease: "power3.out" }, "-=0.5");
+        
+        // Professional cards animation
+        gsap.utils.toArray(".professional-card").forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                delay: index * 0.1,
+                ease: "power3.out"
+            });
+        });
+        
+        // About section animation
+        gsap.from("#about .stat-number", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 70%"
+            },
+            scale: 0,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "back.out(1.7)"
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("shadow-lg");
+            } else {
+                navbar.classList.remove("shadow-lg");
+            }
+        });
+    </script>
+</body>
+</html>

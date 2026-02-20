@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Technology Consulting LLC - Version 1: Minimalist</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .minimal-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .minimal-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 107, 107, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.1);
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
+        }
+        
+        .nav-transparent {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .btn-minimal {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-minimal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-minimal:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-white overflow-x-hidden">
+    <!-- Floating Shapes -->
+    <div class="floating-shape w-64 h-64 accent-gradient rounded-full top-20 left-10"></div>
+    <div class="floating-shape w-96 h-96 accent-gradient rounded-full bottom-20 right-10" style="animation-delay: -5s;"></div>
+    <div class="floating-shape w-48 h-48 accent-gradient rounded-full top-1/2 left-1/2" style="animation-delay: -10s;"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 nav-transparent transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 accent-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-bolt text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-light tracking-wide">KaliTC</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-block px-4 py-2 rounded-full border border-gray-800 text-gray-400 text-sm mb-8">
+                    <i class="fas fa-circle text-red-500 text-xs mr-2"></i>Available for Projects
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-light mb-6 leading-tight">
+                    <span class="text-gradient">Kali Technology</span><br>
+                    Consulting
+                </h1>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Enterprise-grade MSP solutions, telecom services, and cloud infrastructure. 
+                    Transform your business with cutting-edge technology and expert staffing.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <button class="btn-minimal accent-gradient text-white px-8 py-4 rounded-full font-medium">
+                        Start Project
+                    </button>
+                    <button class="btn-minimal border border-gray-700 text-white px-8 py-4 rounded-full font-medium hover:border-gray-500">
+                        View Portfolio
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div>
+                        <div class="text-3xl font-light text-gradient">500+</div>
+                        <div class="text-gray-500 text-sm">Clients</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-light text-gradient">24/7</div>
+                        <div class="text-gray-500 text-sm">Support</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-light text-gradient">99.9%</div>
+                        <div class="text-gray-500 text-sm">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-light mb-4">
+                    Our <span class="text-gradient">Services</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Comprehensive technology solutions designed for modern businesses.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">MSP Services</h3>
+                    <p class="text-gray-400 mb-4">Complete managed services with 24/7 monitoring and support.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-satellite-dish text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Telecom Solutions</h3>
+                    <p class="text-gray-400 mb-4">Voice, data, and network infrastructure services.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fab fa-microsoft text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Microsoft 365</h3>
+                    <p class="text-gray-400 mb-4">Deployment, migration, and management services.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-400 mb-4">AWS, Azure, and hybrid cloud infrastructure.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">SaaS Solutions</h3>
+                    <p class="text-gray-400 mb-4">Custom software development and integration.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Hardware Reseller</h3>
+                    <p class="text-gray-400 mb-4">Enterprise hardware with installation and support.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Staffing Services</h3>
+                    <p class="text-gray-400 mb-4">Professional IT talent acquisition and placement.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Cybersecurity</h3>
+                    <p class="text-gray-400 mb-4">Security assessments and ongoing monitoring.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="minimal-card bg-gray-900/50 p-8 rounded-2xl">
+                    <div class="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">IT Consulting</h3>
+                    <p class="text-gray-400 mb-4">Strategic technology planning and consulting.</p>
+                    <a href="#" class="text-gradient text-sm hover:underline">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-light mb-8">
+                    About <span class="text-gradient">KaliTC</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-12 leading-relaxed">
+                    Kali Technology Consulting LLC delivers enterprise-grade technology solutions with a focus on reliability, 
+                    security, and innovation. With over 15 years of experience and 50+ certified experts, we help businesses 
+                    transform their digital infrastructure.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="text-3xl font-light text-gradient mb-2">15+</div>
+                        <div class="text-gray-500 text-sm">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-light text-gradient mb-2">50+</div>
+                        <div class="text-gray-500 text-sm">Certified Experts</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-light text-gradient mb-2">100+</div>
+                        <div class="text-gray-500 text-sm">Tech Partners</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-light text-gradient mb-2">24/7</div>
+                        <div class="text-gray-500 text-sm">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-light mb-8">
+                    Get In <span class="text-gradient">Touch</span>
+                </h2>
+                <p class="text-gray-400 mb-12">
+                    Ready to transform your business? Let's discuss your technology needs.
+                </p>
+                
+                <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800">
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="text-gray-500 text-sm mb-1">Website</div>
+                            <div class="text-white">www.kalitc.io</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-sm mb-1">Email</div>
+                            <div class="text-white">info@kalitc.io</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-sm mb-1">Phone</div>
+                            <div class="text-white">+1 (555) 123-4567</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-sm mb-1">Support</div>
+                            <div class="text-white">24/7 Available</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-minimal accent-gradient text-white px-8 py-3 rounded-full font-medium w-full">
+                        Start Conversation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-900 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-8 h-8 accent-gradient rounded-full flex items-center justify-center">
+                    <i class="fas fa-bolt text-white text-sm"></i>
+                </div>
+                <span class="text-lg font-light">KaliTC</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">
+                Your trusted partner for technology solutions
+            </p>
+            <p class="text-gray-600 text-xs">
+                © 2024 Kali Technology Consulting LLC. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero animations
+        gsap.timeline()
+            .from("#home .inline-block", { duration: 1, y: 30, opacity: 0, ease: "power3.out" })
+            .from("#home h1", { duration: 1.2, y: 50, opacity: 0, ease: "power3.out" }, "-=0.5")
+            .from("#home p", { duration: 1, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+            .from("#home .flex.gap-4", { duration: 0.8, y: 20, opacity: 0, ease: "power3.out" }, "-=0.4")
+            .from("#home .grid", { duration: 0.8, y: 20, opacity: 0, ease: "power3.out" }, "-=0.3");
+        
+        // Floating shapes animation
+        gsap.to(".floating-shape", {
+            rotation: 360,
+            duration: 20,
+            repeat: -1,
+            ease: "none",
+            stagger: 5
+        });
+        
+        // Service cards animation
+        gsap.utils.toArray(".minimal-card").forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%"
+                },
+                y: 60,
+                opacity: 0,
+                duration: 0.8,
+                delay: index * 0.1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("bg-gray-950/80");
+            } else {
+                navbar.classList.remove("bg-gray-950/80");
+            }
+        });
+    </script>
+</body>
+</html>

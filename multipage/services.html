@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Kali Technology Consulting, LLC</title>
+    <meta name="description" content="Comprehensive technology solutions including Network, UC, Contact Center, Cybersecurity, Cloud, IoT, Managed Services, and SD-WAN.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon"><i class="fas fa-bolt"></i></div>
+                <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="partners.html">Partners</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="nav-cta">Contact Us</a>
+            </div>
+            <div class="nav-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="hero-grid"></div>
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+        </div>
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Services</span>
+            </div>
+            <h1>Technology Solutions</h1>
+            <p>Comprehensive enterprise solutions across 8 key technology categories, powered by 200+ leading technology providers.</p>
+        </div>
+    </div>
+
+    <!-- Quick Nav -->
+    <section style="background:#0f172a;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:64px;z-index:100;backdrop-filter:blur(20px);">
+        <div class="container">
+            <div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;justify-content:center;flex-wrap:wrap;">
+                <a href="#managed" class="filter-btn active">MSP Services</a>
+                <a href="#reseller" class="filter-btn">Hardware Reseller</a>
+                <a href="#ai" class="filter-btn">AI Development</a>
+                <a href="#network" class="filter-btn">Network &amp; Voice</a>
+                <a href="#uc" class="filter-btn">UC/Collaboration</a>
+                <a href="#cc" class="filter-btn">Contact Center</a>
+                <a href="#security" class="filter-btn">Cybersecurity</a>
+                <a href="#cloud" class="filter-btn">Cloud</a>
+                <a href="#iot" class="filter-btn">Mobility &amp; IoT</a>
+                <a href="#sdwan" class="filter-btn">SD-WAN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MSP Services (Kali Technology Consulting's own) -->
+    <section class="section section-dark" id="managed">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <div class="section-badge"><i class="fas fa-server"></i> MSP Services</div>
+                    <h2 style="color:#fff;">Managed Service Provider</h2>
+                    <p style="color:#94a3b8;">Kali Technology Consulting, LLC delivers comprehensive managed IT services directly to your business. From 24/7 monitoring and proactive maintenance to strategic IT planning and help desk support — we are your dedicated technology partner, not a middleman.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">24/7 Monitoring</span>
+                        <span class="service-feature">Help Desk</span>
+                        <span class="service-feature">Network Management</span>
+                        <span class="service-feature">Patch Management</span>
+                        <span class="service-feature">vCIO / IT Strategy</span>
+                        <span class="service-feature">Backup & DR</span>
+                        <span class="service-feature">Endpoint Security</span>
+                        <span class="service-feature">Cloud Management</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4 style="color:#fff;">Direct Support, No Middleman</h4><p style="color:#94a3b8;">Our in-house team handles your IT — you always know who's managing your systems</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4 style="color:#fff;">Proactive, Not Reactive</h4><p style="color:#94a3b8;">We prevent issues before they impact your business with continuous monitoring</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4 style="color:#fff;">Scalable Plans</h4><p style="color:#94a3b8;">Flexible service tiers that grow with your business — from basic monitoring to full IT outsourcing</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Our MSP Capabilities</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                            <div style="padding:16px;background:rgba(0,112,184,0.1);border-radius:12px;text-align:center;">
+                                <i class="fas fa-desktop" style="font-size:1.5rem;color:#3399d6;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Remote & On-Site</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Full support coverage</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(14,165,233,0.1);border-radius:12px;text-align:center;">
+                                <i class="fas fa-shield-alt" style="font-size:1.5rem;color:#38bdf8;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Security First</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Built-in cybersecurity</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(245,158,11,0.1);border-radius:12px;text-align:center;">
+                                <i class="fas fa-chart-line" style="font-size:1.5rem;color:#fbbf24;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Strategic IT</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">vCIO & roadmapping</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(16,185,129,0.1);border-radius:12px;text-align:center;">
+                                <i class="fas fa-cloud" style="font-size:1.5rem;color:#34d399;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Cloud Managed</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Azure, AWS, M365</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Reseller -->
+    <section class="section" id="reseller" style="background:#fff;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <div class="section-badge" style="background:rgba(0,112,184,0.1);border-color:rgba(0,112,184,0.2);color:#0070b8;"><i class="fas fa-boxes"></i> Hardware Reseller</div>
+                    <h2 style="color:#0f172a;">Authorized Hardware Reseller</h2>
+                    <p style="color:#64748b;">Kali Technology Consulting, LLC partners directly with the world's leading hardware manufacturers and distributors to provide enterprise-grade equipment at steep discounts. From workstations and servers to NAS storage and networking gear, we source, configure, and deploy.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">Workstations</span>
+                        <span class="service-feature">Servers</span>
+                        <span class="service-feature">NAS / Storage</span>
+                        <span class="service-feature">Networking</span>
+                        <span class="service-feature">Peripherals</span>
+                        <span class="service-feature">Licensing</span>
+                        <span class="service-feature">Deployment</span>
+                        <span class="service-feature">Warranty</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Volume Pricing</h4><p style="color:#64748b;">Steep discounts through direct manufacturer and distributor partnerships</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>White-Glove Deployment</h4><p style="color:#64748b;">Pre-configured, imaged, and deployed on-site or shipped ready to use</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Full Lifecycle Support</h4><p style="color:#64748b;">From procurement through warranty and end-of-life asset management</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="service-card" style="padding:24px;">
+                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Our Hardware Partners</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <img src="images/reseller/lenovo.svg" alt="Lenovo" style="height:32px;width:auto;margin-bottom:8px;">
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Lenovo</div>
+                                <div style="font-size:0.7rem;color:#64748b;">ThinkPad, ThinkCentre, Servers</div>
+                            </div>
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <img src="images/reseller/dell.svg" alt="Dell" style="height:32px;width:auto;margin-bottom:8px;">
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Dell Technologies</div>
+                                <div style="font-size:0.7rem;color:#64748b;">PowerEdge, OptiPlex, Latitude</div>
+                            </div>
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <img src="images/reseller/hp.svg" alt="HP" style="height:32px;width:auto;margin-bottom:8px;">
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">HP Inc.</div>
+                                <div style="font-size:0.7rem;color:#64748b;">EliteBook, ProDesk, Z Series</div>
+                            </div>
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <img src="images/reseller/synology.svg" alt="Synology" style="height:32px;width:auto;margin-bottom:8px;">
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Synology</div>
+                                <div style="font-size:0.7rem;color:#64748b;">NAS, Surveillance, Backup</div>
+                            </div>
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <img src="images/reseller/ingram-micro.svg" alt="Ingram Micro" style="height:32px;width:auto;margin-bottom:8px;">
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Ingram Micro</div>
+                                <div style="font-size:0.7rem;color:#64748b;">Full IT Distribution</div>
+                            </div>
+                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
+                                <div style="display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:8px;">
+                                    <img src="images/reseller/cisco.svg" alt="Cisco" style="height:24px;width:auto;">
+                                    <img src="images/reseller/meraki.svg" alt="Meraki" style="height:24px;width:auto;">
+                                    <img src="images/reseller/ubiquiti.svg" alt="Ubiquiti" style="height:24px;width:auto;">
+                                </div>
+                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">+ More</div>
+                                <div style="font-size:0.7rem;color:#64748b;">Cisco, Meraki, Ubiquiti, APC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Development -->
+    <section class="section section-dark" id="ai">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">AI Capabilities</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                            <div style="padding:16px;background:rgba(139,92,246,0.08);border-radius:12px;text-align:center;">
+                                <i class="fas fa-brain" style="font-size:1.5rem;color:#8b5cf6;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Machine Learning</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Custom ML models</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(139,92,246,0.08);border-radius:12px;text-align:center;">
+                                <i class="fas fa-comments" style="font-size:1.5rem;color:#8b5cf6;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Chatbots & NLP</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Intelligent assistants</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(139,92,246,0.08);border-radius:12px;text-align:center;">
+                                <i class="fas fa-chart-bar" style="font-size:1.5rem;color:#8b5cf6;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Predictive Analytics</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Data-driven insights</div>
+                            </div>
+                            <div style="padding:16px;background:rgba(139,92,246,0.08);border-radius:12px;text-align:center;">
+                                <i class="fas fa-cog" style="font-size:1.5rem;color:#8b5cf6;margin-bottom:8px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Process Automation</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">AI-powered workflows</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.2);color:#8b5cf6;"><i class="fas fa-brain"></i> AI Development</div>
+                    <h2 style="color:#fff;">AI &amp; Automation Solutions</h2>
+                    <p style="color:#94a3b8;">Harness the power of artificial intelligence to transform your business operations. From custom AI chatbots and intelligent document processing to predictive analytics and workflow automation — we build AI solutions tailored to your specific business challenges.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">Custom AI Models</span>
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">Chatbots &amp; Assistants</span>
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">Document AI</span>
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">Workflow Automation</span>
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">Predictive Analytics</span>
+                        <span class="service-feature" style="background:rgba(139,92,246,0.1);color:#8b5cf6;">API Integrations</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;"><i class="fas fa-check"></i></div>
+                            <div><h4 style="color:#fff;">Custom-Built Solutions</h4><p style="color:#94a3b8;">AI tailored to your industry, data, and workflows — not off-the-shelf</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6;"><i class="fas fa-check"></i></div>
+                            <div><h4 style="color:#fff;">Seamless Integration</h4><p style="color:#94a3b8;">AI solutions that plug into your existing systems and tech stack</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network & Voice -->
+    <section class="section" style="background:#fff;" id="network">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <div class="section-badge" style="background:rgba(0,112,184,0.1);border-color:rgba(0,112,184,0.2);color:#0070b8;"><i class="fas fa-network-wired"></i> Network &amp; Voice</div>
+                    <h2>Enterprise Networking &amp; Voice</h2>
+                    <p>From dedicated internet access and MPLS to SIP trunking and managed WAN, we deliver carrier-grade networking solutions. Our partnerships with AT&amp;T, Comcast Business, Spectrum, Verizon, Zayo, and dozens more ensure you get the best connectivity at the best price.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">SD-WAN</span>
+                        <span class="service-feature">MPLS</span>
+                        <span class="service-feature">DIA</span>
+                        <span class="service-feature">Fiber</span>
+                        <span class="service-feature">SIP Trunking</span>
+                        <span class="service-feature">Ethernet</span>
+                        <span class="service-feature">Broadband</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Multi-Carrier Sourcing</h4><p>Compare quotes from 50+ carriers simultaneously</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Cost Optimization</h4><p>Average 30% savings on telecom spend</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Lifecycle Management</h4><p>Ongoing support from procurement to renewal</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div style="padding:24px;background:rgba(0,112,184,0.03);border:1px solid rgba(0,112,184,0.1);border-radius:16px;">
+                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured Network Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424271321-35LSY39INB559HIKDIA6/att_biz_hz_alt_4cp_pos.gif" alt="AT&amp;T"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561438893325-L9MC2NCAF74U2B95BEA9/comcast_business.png" alt="Comcast"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437053538-F6CNBUKZ3N9U69KSEN0F/avant-Verizon-logo_1.png" alt="Verizon"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425960279-2GCTF8KEGIYERV94DDOO/zayo.gif" alt="Zayo"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425115660-PT7SUUWCQEIA7W08PUD6/GTT_logo_PMS.gif" alt="GTT"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425115413-VDO4DKIH831HJ8IVS9V6/granite.gif" alt="Granite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UC & Collaboration -->
+    <section class="section section-dark" id="uc">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured UC Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425795331-W4T3AQQ0ENDLR15SWLB7/RingCentral.gif" alt="RingCentral"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424802043-ZFZCCGOU0XGLK2KKI2TF/Dialpad_Navy.gif" alt="Dialpad"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425944671-N3H3UIKVT8G6E84DXJJY/VONAGE.gif" alt="Vonage"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746707-WG61EDES4DUMKA8LZMG7/Nextiva-Logo_220.gif" alt="Nextiva"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425407709-6KR0WIGQ2OB935R2LX5M/Mitel_Logo_Full_Color-Tagline.gif" alt="Mitel"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561439156378-RY3B6A323Z5EXKGZZGGT/broadvoice19.jpg" alt="Broadvoice"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(14,165,233,0.1);border-color:rgba(14,165,233,0.2);color:#0ea5e9;"><i class="fas fa-comments"></i> UC &amp; Collaboration</div>
+                    <h2>Unified Communications</h2>
+                    <p>Modern UCaaS platforms that unify voice, video, messaging, and file sharing into a single seamless experience. We help you evaluate, deploy, and manage the right UC solution for your workforce.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature" style="background:rgba(14,165,233,0.1);color:#0ea5e9;">UCaaS</span>
+                        <span class="service-feature" style="background:rgba(14,165,233,0.1);color:#0ea5e9;">Video Conferencing</span>
+                        <span class="service-feature" style="background:rgba(14,165,233,0.1);color:#0ea5e9;">Team Messaging</span>
+                        <span class="service-feature" style="background:rgba(14,165,233,0.1);color:#0ea5e9;">VoIP</span>
+                        <span class="service-feature" style="background:rgba(14,165,233,0.1);color:#0ea5e9;">Hosted PBX</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon" style="background:rgba(14,165,233,0.1);color:#0ea5e9;"><i class="fas fa-check"></i></div>
+                            <div><h4>Platform Comparison</h4><p>Side-by-side evaluation of top UCaaS platforms</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon" style="background:rgba(14,165,233,0.1);color:#0ea5e9;"><i class="fas fa-check"></i></div>
+                            <div><h4>Migration Support</h4><p>Seamless transition from legacy PBX to cloud</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Center -->
+    <section class="section" style="background:#fff;" id="cc">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <div class="section-badge" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2);color:#f59e0b;"><i class="fas fa-headset"></i> Contact Center</div>
+                    <h2>Cloud Contact Center</h2>
+                    <p>Transform customer engagement with AI-powered contact center platforms. From omnichannel routing and workforce management to real-time analytics and CRM integration.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">CCaaS</span>
+                        <span class="service-feature">AI Routing</span>
+                        <span class="service-feature">Omnichannel</span>
+                        <span class="service-feature">WFM</span>
+                        <span class="service-feature">Analytics</span>
+                        <span class="service-feature">CRM Integration</span>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div style="padding:24px;background:rgba(245,158,11,0.03);border:1px solid rgba(245,158,11,0.1);border-radius:16px;">
+                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured CC Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965447-2HID0HNX4EMMGN9IBLDJ/Five9_logo_primary_RGB220.gif" alt="Five9"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746788-3ZGA16Y4154X6RDFUC6I/NICE_inContact.gif" alt="NICE"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561428786704-ZYBGZU74KC03PLJ3CU3N/avant-Genesys-logo_1.png" alt="Genesys"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561435037298-FD15N6DK0ZQ7FLV9JK47/avant-talkdesk-logo-template.png" alt="Talkdesk"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425796171-WM151BJ54T91U8I0B2UZ/serenova-fulllogo-fullcolor1.gif" alt="Serenova"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425154325-A740QYJX97KJBWUM8PAD/Intelepeer.gif" alt="IntelePeer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity -->
+    <section class="section section-dark" id="security">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Security Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561435111880-UVGVG5G0UMJSC8XGWTU9/AVANT-Trustwave-Logo-Template.png" alt="Trustwave"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561426497081-CFTJK46KAFGC5TUSC23Q/AVANT-Alert-Logic-Logo-Template.png" alt="Alert Logic"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425821864-2FSLIT6MT44NG5NRFSPU/SkOUT_tagline_rgb_300ppi.gif" alt="SkOUT"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437053076-YB0DMY2Z4EI8WQ8BI8BM/avant-Veeam-logo_1.png" alt="Veeam"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561426494950-2PV0TAUSEFX14BXAWW2U/avant-acronis-logo.png" alt="Acronis"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425944411-CKVSTLHQT5XTPKBIDNDZ/vigilant_logo.gif" alt="Vigilant"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.2);color:#ef4444;"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+                    <h2>Cybersecurity Solutions</h2>
+                    <p>Comprehensive security solutions including SIEM, SOC, endpoint protection, zero trust architecture, vulnerability management, and compliance. Protect your business from evolving threats.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">SIEM/SOC</span>
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">EDR/XDR</span>
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">Zero Trust</span>
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">DLP</span>
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">Compliance</span>
+                        <span class="service-feature" style="background:rgba(239,68,68,0.1);color:#ef4444;">Pen Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud Computing -->
+    <section class="section" style="background:#fff;" id="cloud">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <div class="section-badge" style="background:rgba(14,165,233,0.1);border-color:rgba(14,165,233,0.2);color:#0ea5e9;"><i class="fas fa-cloud"></i> Cloud Computing</div>
+                    <h2>Cloud Infrastructure &amp; Services</h2>
+                    <p>Multi-cloud strategies with AWS, Azure, and GCP expertise. From cloud migration and optimization to managed cloud services and colocation, we help you build the right cloud foundation.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">IaaS</span>
+                        <span class="service-feature">PaaS</span>
+                        <span class="service-feature">Colocation</span>
+                        <span class="service-feature">DRaaS</span>
+                        <span class="service-feature">BaaS</span>
+                        <span class="service-feature">Hybrid Cloud</span>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div style="padding:24px;background:rgba(14,165,233,0.03);border:1px solid rgba(14,165,233,0.1);border-radius:16px;">
+                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured Cloud Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425770079-KSIQWZ5ND3PFZOIVWSGL/Rackspace_Wordmark_Red.gif" alt="Rackspace"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424942318-V6A5KRUYFJCUT0NUHWDM/Equinix.gif" alt="Equinix"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965479-VEMBRFHMA01AJ47OA7V2/flexential-logo.gif" alt="Flexential"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424625279-9MK44TBOJPFFU9G7PR4R/CyrusOne_stk_2c_pos_cmyk.gif" alt="CyrusOne"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425901440-OU60YCAUPW5PYHIJYG9K/TierPoint_logo_vertical_Large-Web.gif" alt="TierPoint"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424601343-GGAIQ8BCG58TNCW1DQT5/Coresite.gif" alt="CoreSite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobility & IoT -->
+    <section class="section section-dark" id="iot">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Mobility Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425901583-CB3TG9FDGZW8OOH1O58P/TMobile.gif" alt="T-Mobile"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425880149-KBE7IZ3I7KJYUC47VRT2/Sprint_PP_HighRes-220.gif" alt="Sprint"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425821607-49PS6EK79NV9Y6YB8RTF/Sierra-Wireless.gif" alt="Sierra Wireless"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424233903-ZBM2PHSZVYVDW9PYJWGR/Advantix_THINaer.gif" alt="Advantix"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425902551-LT3AXH6RNPYMM5DNDWSB/TN_Intelligent_Mobility220.gif" alt="TN"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425704017-JF3BW85MQMX1KNTOWG2R/Natural_Wireless_Logo_White.gif" alt="Natural Wireless"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2);color:#10b981;"><i class="fas fa-robot"></i> Mobility, IoT &amp; AI</div>
+                    <h2>Mobility, IoT &amp; AI Solutions</h2>
+                    <p>Next-generation mobility solutions, IoT connectivity platforms, and AI-powered business intelligence. From 5G enterprise plans to smart building solutions and predictive analytics.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature" style="background:rgba(16,185,129,0.1);color:#10b981;">5G Enterprise</span>
+                        <span class="service-feature" style="background:rgba(16,185,129,0.1);color:#10b981;">IoT Platforms</span>
+                        <span class="service-feature" style="background:rgba(16,185,129,0.1);color:#10b981;">AI/ML</span>
+                        <span class="service-feature" style="background:rgba(16,185,129,0.1);color:#10b981;">Edge Computing</span>
+                        <span class="service-feature" style="background:rgba(16,185,129,0.1);color:#10b981;">MDM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SD-WAN -->
+    <section class="section" style="background:#fff;" id="sdwan">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div style="padding:24px;background:rgba(0,112,184,0.03);border:1px solid rgba(0,112,184,0.1);border-radius:16px;">
+                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured SD-WAN Providers</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424271300-SL8SEO36K45DU1CWA8Z8/aryaka_logo_220x125.gif" alt="Aryaka"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424471117-6WR1TKX02Z22FKYMYZ2G/CATO_LOGO_2019.gif" alt="Cato"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437128328-3AG623X825R667Z73M2F/viptela.png" alt="Viptela"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437127908-0AKECHQ98Q1QAVJJ32K7/versa.png" alt="Versa"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424520691-HNLX68X525QT1YV7UJ2A/CloudGenix_GRD_CLR_RGB-800.gif" alt="CloudGenix"></div>
+                            <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425387680-LDOJVRD5N7VX7YQNJ94A/matrix.gif" alt="Matrix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(0,112,184,0.1);border-color:rgba(0,112,184,0.2);color:#0070b8;"><i class="fas fa-project-diagram"></i> SD-WAN</div>
+                    <h2>SD-WAN &amp; SASE Solutions</h2>
+                    <p>Software-defined wide area networking for optimized connectivity, application performance, and cost reduction. Combine SD-WAN with SASE for complete network security and performance.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature" style="background:rgba(0,112,184,0.1);color:#0070b8;">SD-WAN</span>
+                        <span class="service-feature" style="background:rgba(0,112,184,0.1);color:#0070b8;">SASE</span>
+                        <span class="service-feature" style="background:rgba(0,112,184,0.1);color:#0070b8;">WAN Optimization</span>
+                        <span class="service-feature" style="background:rgba(0,112,184,0.1);color:#0070b8;">Multi-Site</span>
+                        <span class="service-feature" style="background:rgba(0,112,184,0.1);color:#0070b8;">QoS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">Need Help Choosing the Right Solution?</h2>
+            <p class="reveal">Our technology consultants will analyze your needs and recommend the best providers from our portfolio of 200+ partners.</p>
+            <a href="contact.html" class="btn btn-white reveal"><i class="fas fa-paper-plane"></i> Request a Free Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom:12px;">
+                        <div class="nav-logo-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+                    </a>
+                    <p>Kali Technology Consulting, LLC — your trusted MSP technology consultant, providing enterprise technology solutions from 200+ leading providers.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#network">Network &amp; Voice</a></li>
+                        <li><a href="#cloud">Cloud Computing</a></li>
+                        <li><a href="#security">Cybersecurity</a></li>
+                        <li><a href="#uc">UC &amp; Collaboration</a></li>
+                        <li><a href="#cc">Contact Center</a></li>
+                        <li><a href="#managed">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="partners.html">Our Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://kalitc.io" target="_blank"><i class="fas fa-globe" style="margin-right:8px;color:#3399d6;"></i>kalitc.io</a></li>
+                        <li><a href="mailto:info@kalitc.io"><i class="fas fa-envelope" style="margin-right:8px;color:#3399d6;"></i>info@kalitc.io</a></li>
+                        <li><a href="tel:+16197595900"><i class="fas fa-phone" style="margin-right:8px;color:#3399d6;"></i>(619) 759-5900</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kali Technology Consulting, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>animatePageHeader();</script>
+</body>
+</html>

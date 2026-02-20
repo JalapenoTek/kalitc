@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Technology Consulting LLC - Version 2: Bold & Vibrant</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .neon-gradient {
+            background: linear-gradient(45deg, #00F5FF, #FF00FF, #00FF00, #FFD700, #FF1493);
+            background-size: 300% 300%;
+            animation: gradient-shift 4s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .neon-text {
+            color: #00F5FF;
+            text-shadow: 0 0 10px #00F5FF, 0 0 20px #00F5FF, 0 0 30px #00F5FF;
+        }
+        
+        .bold-card {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1));
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        
+        .bold-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(45deg, #FF00FF, #00F5FF, #00FF00);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .bold-card:hover::before {
+            opacity: 1;
+        }
+        
+        .bold-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 0, 255, 0.3);
+        }
+        
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: grid-move 10s linear infinite;
+        }
+        
+        @keyframes grid-move {
+            0% { background-position: 0 0; }
+            100% { background-position: 30px 30px; }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 245, 255, 0.8); }
+        }
+        
+        .nav-cyber {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+        
+        .btn-cyber {
+            background: linear-gradient(45deg, #FF00FF, #00F5FF);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cyber:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+        }
+        
+        .floating-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00F5FF;
+            border-radius: 50%;
+            animation: float-particle 10s infinite linear;
+        }
+        
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Floating Particles -->
+    <div class="floating-particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="floating-particle" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="floating-particle" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="floating-particle" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="floating-particle" style="left: 90%; animation-delay: 8s;"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 nav-cyber transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 neon-gradient rounded-lg flex items-center justify-center pulse-glow">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-black tracking-tight">KaliTC</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-cyan-400 hover:text-cyan-300 font-semibold transition">HOME</a>
+                    <a href="#services" class="text-cyan-400 hover:text-cyan-300 font-semibold transition">SERVICES</a>
+                    <a href="#about" class="text-cyan-400 hover:text-cyan-300 font-semibold transition">ABOUT</a>
+                    <a href="#contact" class="text-cyan-400 hover:text-cyan-300 font-semibold transition">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative cyber-grid pt-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="inline-block px-6 py-3 rounded-full border-2 border-cyan-400 text-cyan-400 font-bold mb-8 animate-pulse">
+                    🚀 FUTURE-READY TECHNOLOGY SOLUTIONS
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                    <span class="neon-text">KALI</span><br>
+                    <span class="neon-text">TECHNOLOGY</span><br>
+                    <span class="text-yellow-400">CONSULTING</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto font-semibold">
+                    REVOLUTIONARY MSP SERVICES • TELECOM EXCELLENCE • CLOUD DOMINATION • STAFFING MASTERY
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                    <button class="btn-cyber text-black px-10 py-5 rounded-full font-black text-lg">
+                        🎯 LAUNCH PROJECT
+                    </button>
+                    <button class="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-full font-black text-lg hover:bg-cyan-400 hover:text-black transition">
+                        ⚡ POWER DEMO
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-5xl font-black neon-text mb-2">500+</div>
+                        <div class="text-cyan-400 font-bold">CLIENTS</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-yellow-400 mb-2">24/7</div>
+                        <div class="text-cyan-400 font-bold">SUPPORT</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-green-400 mb-2">99.9%</div>
+                        <div class="text-cyan-400 font-bold">UPTIME</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gradient-to-b from-black to-purple-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-7xl font-black mb-6">
+                    <span class="neon-text">OUR</span><br>
+                    <span class="text-yellow-400">SERVICES</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto font-semibold">
+                    CUTTING-EDGE SOLUTIONS FOR DIGITAL DOMINATION
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">MSP SERVICES</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">ULTIMATE MANAGED SERVICES WITH 24/7 MONITORING</p>
+                    <div class="text-yellow-400 font-bold">→ DOMINATE</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-satellite-dish text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">TELECOM</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">NEXT-GEN VOICE, DATA & NETWORK INFRASTRUCTURE</p>
+                    <div class="text-yellow-400 font-bold">→ CONQUER</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-microsoft text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">M365</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">MICROSOFT 365 DEPLOYMENT & OPTIMIZATION</p>
+                    <div class="text-yellow-400 font-bold">→ MASTER</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">CLOUD</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">AWS, AZURE & HYBRID CLOUD SUPREMACY</p>
+                    <div class="text-yellow-400 font-bold">→ ASCEND</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">SAAS</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">CUSTOM SOFTWARE DEVELOPMENT EXCELLENCE</p>
+                    <div class="text-yellow-400 font-bold">→ INNOVATE</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">HARDWARE</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">ENTERPRISE HARDWARE WITH PREMIUM SUPPORT</p>
+                    <div class="text-yellow-400 font-bold">→ EQUIP</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">STAFFING</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">ELITE IT TALENT ACQUISITION & PLACEMENT</p>
+                    <div class="text-yellow-400 font-bold">→ RECRUIT</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">SECURITY</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">CYBERSECURITY FORTRESS & PROTECTION</p>
+                    <div class="text-yellow-400 font-bold">→ DEFEND</div>
+                </div>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="w-16 h-16 neon-gradient rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-cyan-400">CONSULTING</h3>
+                    <p class="text-gray-300 mb-4 font-semibold">STRATEGIC TECHNOLOGY ROADMAPS</p>
+                    <div class="text-yellow-400 font-bold">→ ADVISE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-purple-950 to-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-8">
+                    <span class="neon-text">ABOUT</span><br>
+                    <span class="text-yellow-400">KALITC</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-12 font-semibold leading-relaxed">
+                    KALI TECHNOLOGY CONSULTING LLC DELIVERS EXPLOSIVE TECHNOLOGY SOLUTIONS WITH UNMATCHED POWER. 
+                    OVER 15 YEARS OF DIGITAL WARFARE EXPERIENCE AND 50+ CERTIFIED TECH WARRIORS READY TO TRANSFORM YOUR BUSINESS.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="bold-card p-6 rounded-xl">
+                        <div class="text-4xl font-black neon-text mb-2">15+</div>
+                        <div class="text-cyan-400 font-bold">YEARS</div>
+                    </div>
+                    <div class="bold-card p-6 rounded-xl">
+                        <div class="text-4xl font-black text-yellow-400 mb-2">50+</div>
+                        <div class="text-cyan-400 font-bold">EXPERTS</div>
+                    </div>
+                    <div class="bold-card p-6 rounded-xl">
+                        <div class="text-4xl font-black text-green-400 mb-2">100+</div>
+                        <div class="text-cyan-400 font-bold">PARTNERS</div>
+                    </div>
+                    <div class="bold-card p-6 rounded-xl">
+                        <div class="text-4xl font-black text-pink-400 mb-2">24/7</div>
+                        <div class="text-cyan-400 font-bold">BATTLE READY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-8">
+                    <span class="neon-text">CONTACT</span><br>
+                    <span class="text-yellow-400">COMMAND</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-12 font-semibold">
+                    READY TO LAUNCH YOUR DIGITAL TRANSFORMATION? ENGAGE NOW!
+                </p>
+                
+                <div class="bold-card p-8 rounded-2xl">
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="text-cyan-400 font-bold mb-1">🌐 WEBSITE</div>
+                            <div class="text-white font-semibold">www.kalitc.io</div>
+                        </div>
+                        <div>
+                            <div class="text-cyan-400 font-bold mb-1">📧 EMAIL</div>
+                            <div class="text-white font-semibold">info@kalitc.io</div>
+                        </div>
+                        <div>
+                            <div class="text-cyan-400 font-bold mb-1">📞 PHONE</div>
+                            <div class="text-white font-semibold">+1 (555) 123-4567</div>
+                        </div>
+                        <div>
+                            <div class="text-cyan-400 font-bold mb-1">⚡ SUPPORT</div>
+                            <div class="text-white font-semibold">24/7 ONLINE</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-cyber text-black px-10 py-4 rounded-full font-black text-lg w-full">
+                        🚀 INITIATE CONTACT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-cyan-400 py-12 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-10 h-10 neon-gradient rounded-lg flex items-center justify-center pulse-glow">
+                    <i class="fas fa-bolt text-white"></i>
+                </div>
+                <span class="text-2xl font-black">KaliTC</span>
+            </div>
+            <p class="text-cyan-400 font-semibold mb-4">
+                DIGITAL DOMINATION SPECIALISTS
+            </p>
+            <p class="text-gray-500 text-sm">
+                © 2024 KALI TECHNOLOGY CONSULTING LLC - ALL RIGHTS RESERVED
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Hero animations with more impact
+        gsap.timeline()
+            .from("#home .animate-pulse", { duration: 1, scale: 0, opacity: 0, ease: "back.out(1.7)" })
+            .from("#home h1", { duration: 1.5, y: 100, opacity: 0, ease: "power3.out" }, "-=0.5")
+            .from("#home p", { duration: 1.2, y: 50, opacity: 0, ease: "power3.out" }, "-=0.8")
+            .from("#home .flex.gap-6", { duration: 0.8, y: 30, opacity: 0, ease: "power3.out" }, "-=0.6")
+            .from("#home .grid", { duration: 0.8, scale: 0.8, opacity: 0, ease: "back.out(1.7)" }, "-=0.4");
+        
+        // Floating particles
+        gsap.to(".floating-particle", {
+            y: -2000,
+            duration: 10,
+            repeat: -1,
+            ease: "none",
+            stagger: 2
+        });
+        
+        // Service cards with dramatic entrance
+        gsap.utils.toArray(".bold-card").forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%"
+                },
+                scale: 0,
+                rotation: 180,
+                opacity: 0,
+                duration: 1,
+                delay: index * 0.15,
+                ease: "back.out(1.7)"
+            });
+        });
+        
+        // Continuous neon glow animation
+        gsap.to(".neon-text", {
+            textShadow: "0 0 20px #00F5FF, 0 0 40px #00F5FF, 0 0 60px #00F5FF",
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power2.inOut"
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Navbar enhancement on scroll
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("bg-black/90", "shadow-2xl", "shadow-cyan-400/20");
+            } else {
+                navbar.classList.remove("bg-black/90", "shadow-2xl", "shadow-cyan-400/20");
+            }
+        });
+    </script>
+</body>
+</html>
