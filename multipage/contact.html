@@ -80,6 +80,25 @@
     
     <!-- hCaptcha Script -->
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    
+    <!-- hCaptcha Fallback Script -->
+    <script>
+        window.hcaptchaOnLoad = function() {
+            console.log('hCaptcha loaded successfully');
+        };
+        
+        // Fallback if hCaptcha fails to load
+        setTimeout(function() {
+            if (typeof hcaptcha === 'undefined') {
+                console.log('hCaptcha failed to load, retrying...');
+                var script = document.createElement('script');
+                script.src = 'https://js.hcaptcha.com/1/api.js';
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
+        }, 3000);
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -208,7 +227,7 @@
                             <!-- hCaptcha Spam Protection -->
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
                                 <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Verify You're Human *</label>
-                                <div class="h-captcha" data-captcha="true" style="margin: 0 auto; min-height: 74px;"></div>
+                                <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001" data-captcha="true" style="margin: 0 auto; min-height: 74px; width: 100%; max-width: 303px;"></div>
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
