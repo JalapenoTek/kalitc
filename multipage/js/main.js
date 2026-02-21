@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             preloader.classList.add('loaded');
             initAnimations();
-        }, 1800);
+        }, 800);
     } else {
         initAnimations();
     }
@@ -28,6 +28,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 window.addEventListener('scroll', () => {
+    if (!navbar) return;
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
@@ -409,6 +410,34 @@ function initMarquee() {
 if (document.querySelector('.marquee-track')) {
     window.addEventListener('load', initMarquee);
 }
+
+// ============================================
+// FAQ ACCORDION
+// ============================================
+function toggleFaqGroup(btn) {
+    const group = btn.closest('.faq-group');
+    const isOpen = group.classList.contains('open');
+    document.querySelectorAll('.faq-group.open').forEach(g => g.classList.remove('open'));
+    if (!isOpen) group.classList.add('open');
+}
+
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    item.closest('.faq-group-body').querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+// ============================================
+// FOOTER ACCORDION (mobile only)
+// ============================================
+document.querySelectorAll('.footer-col h4').forEach(h4 => {
+    h4.addEventListener('click', () => {
+        if (window.innerWidth > 640) return;
+        const col = h4.closest('.footer-col');
+        col.classList.toggle('open');
+    });
+});
 
 // ============================================
 // FORM HANDLING

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Kali Technology Consulting, LLC</title>
+    <meta name="description" content="Join Kali Technology Consulting team - We're always looking for talented contractors in San Diego, Riverside, San Bernardino, and Los Angeles counties.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/KTC_Logo_1.png" alt="KTC" style="width:38px;height:38px;border-radius:8px;object-fit:cover;">
+                <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="partners.html">Partners</a>
+                <a href="about.html">About</a>
+                <a href="careers.html" class="active">Careers</a>
+                <a href="contact.html" class="nav-cta">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Careers Hero -->
+    <section class="hero" style="min-height: 30vh; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); display: flex; align-items: center; justify-content: center;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="hero-badge" style="background: rgba(0, 168, 255, 0.15); border: 1px solid rgba(0, 168, 255, 0.3); color: var(--secondary); margin-bottom: 24px;">
+                    <i class="fas fa-briefcase"></i> Join Our Team
+                </div>
+                <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; color: var(--white); text-align: center; width: 100%;">
+                    Careers at Kali Technology Consulting
+                </h1>
+                <p style="font-size: 1.1rem; color: var(--gray-light); max-width: 600px; margin: 0 auto 32px; text-align: center;">
+                    We're always looking for talented contractors to join our growing team of technology consultants.
+                </p>
+                <div class="hero-buttons" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#opportunities" class="btn btn-primary">
+                        <i class="fas fa-search"></i> View Opportunities
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contractor Opportunities -->
+    <section id="opportunities" class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 64px;">
+                <div class="section-badge" style="background: rgba(0, 112, 184, 0.1); border-color: rgba(0, 112, 184, 0.2); color: #0070b8;">
+                    <i class="fas fa-handshake"></i> Contractor Opportunities
+                </div>
+                <h2 style="color: #0f172a; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">
+                    We're Always Looking for Talent
+                </h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+                    Kali Technology Consulting is continuously seeking skilled independent contractors to support our diverse client base across Southern California.
+                </p>
+            </div>
+
+            <div class="opportunities-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 64px;">
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: var(--gradient-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-network-wired" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Network & Voice Engineers
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Experienced contractors with expertise in VoIP, SD-WAN, and enterprise networking solutions.
+                    </p>
+                </div>
+
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-cloud" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Cloud Solutions Specialists
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        AWS, Azure, and Google Cloud platform specialists with migration and optimization experience.
+                    </p>
+                </div>
+
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Cybersecurity Experts
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Security analysts, penetration testers, and compliance specialists with industry certifications.
+                    </p>
+                </div>
+
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-users" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        UC & Collaboration Specialists
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Microsoft Teams, Zoom, and unified communications deployment experts.
+                    </p>
+                </div>
+
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-headset" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Contact Center Experts
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        CCaaS and contact center solution architects with implementation experience.
+                    </p>
+                </div>
+
+                <div class="opportunity-card" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease;">
+                    <div class="card-icon" style="width: 64px; height: 64px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;">
+                        <i class="fas fa-cogs" style="font-size: 1.5rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Managed Services Professionals
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        NOC engineers, systems administrators, and managed IT services specialists.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 64px;">
+                <div class="section-badge" style="background: rgba(0, 112, 184, 0.1); border-color: rgba(0, 112, 184, 0.2); color: #0070b8;">
+                    <i class="fas fa-map-marker-alt"></i> Service Areas
+                </div>
+                <h2 style="color: #0f172a; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">
+                    Southern California Coverage
+                </h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+                    We're actively seeking contractors throughout the Southern California region to support our growing client base.
+                </p>
+            </div>
+
+            <div class="counties-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 48px;">
+                <div class="county-card" style="background: linear-gradient(135deg, rgba(0, 112, 184, 0.05), rgba(0, 168, 255, 0.05)); border: 2px solid rgba(0, 112, 184, 0.1); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.3s ease;">
+                    <i class="fas fa-map-pin" style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 8px;">
+                        San Diego County
+                    </h3>
+                    <p style="color: var(--gray); font-size: 0.95rem;">
+                        Primary service area with headquarters in Chula Vista
+                    </p>
+                </div>
+
+                <div class="county-card" style="background: linear-gradient(135deg, rgba(0, 112, 184, 0.05), rgba(0, 168, 255, 0.05)); border: 2px solid rgba(0, 112, 184, 0.1); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.3s ease;">
+                    <i class="fas fa-map-pin" style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 8px;">
+                        Riverside County
+                    </h3>
+                    <p style="color: var(--gray); font-size: 0.95rem;">
+                        Expanding contractor network throughout the Inland Empire
+                    </p>
+                </div>
+
+                <div class="county-card" style="background: linear-gradient(135deg, rgba(0, 112, 184, 0.05), rgba(0, 168, 255, 0.05)); border: 2px solid rgba(0, 112, 184, 0.1); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.3s ease;">
+                    <i class="fas fa-map-pin" style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 8px;">
+                        San Bernardino County
+                    </h3>
+                    <p style="color: var(--gray); font-size: 0.95rem;">
+                        Growing demand for enterprise technology solutions
+                    </p>
+                </div>
+
+                <div class="county-card" style="background: linear-gradient(135deg, rgba(0, 112, 184, 0.05), rgba(0, 168, 255, 0.05)); border: 2px solid rgba(0, 112, 184, 0.1); border-radius: 12px; padding: 24px; text-align: center; transition: all 0.3s ease;">
+                    <i class="fas fa-map-pin" style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 8px;">
+                        Los Angeles County
+                    </h3>
+                    <p style="color: var(--gray); font-size: 0.95rem;">
+                        Large metropolitan area with diverse client needs
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 64px;">
+                <div class="section-badge" style="background: rgba(0, 112, 184, 0.1); border-color: rgba(0, 112, 184, 0.2); color: #0070b8;">
+                    <i class="fas fa-star"></i> Why Join Us
+                </div>
+                <h2 style="color: #0f172a; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">
+                    Benefits of Working with Kali Technology Consulting, LLC.
+                </h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+                    Join our network of independent contractors and enjoy the flexibility and opportunities we provide.
+                </p>
+            </div>
+
+            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+                <div class="benefit-item" style="text-align: center;">
+                    <div class="benefit-icon" style="width: 80px; height: 80px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <i class="fas fa-dollar-sign" style="font-size: 1.8rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Competitive Rates
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Fair compensation for your expertise and experience in the technology consulting field.
+                    </p>
+                </div>
+
+                <div class="benefit-item" style="text-align: center;">
+                    <div class="benefit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <i class="fas fa-clock" style="font-size: 1.8rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Flexible Schedule
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Work on projects that fit your schedule and maintain work-life balance as an independent contractor.
+                    </p>
+                </div>
+
+                <div class="benefit-item" style="text-align: center;">
+                    <div class="benefit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <i class="fas fa-briefcase" style="font-size: 1.8rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Diverse Projects
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Work with various clients across different industries and technology stacks.
+                    </p>
+                </div>
+
+                <div class="benefit-item" style="text-align: center;">
+                    <div class="benefit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #00a8ff, #0070b8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <i class="fas fa-users" style="font-size: 1.8rem; color: var(--white);"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--dark); margin-bottom: 12px;">
+                        Professional Network
+                    </h3>
+                    <p style="color: var(--gray); line-height: 1.6;">
+                        Connect with other technology professionals and expand your professional network.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: white;">
+        <div class="container">
+            <div class="contact-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+                    <div class="section-badge" style="background: rgba(0, 112, 184, 0.1); border-color: rgba(0, 112, 184, 0.2); color: #0070b8;">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </div>
+                    <h2 style="color: #0f172a; font-size: 2.5rem; font-weight: 700; margin-bottom: 16px;">
+                        Ready to Join Our Team?
+                    </h2>
+                    <p style="color: #64748b; font-size: 1.1rem;">
+                        Send us your resume and a brief introduction about your expertise and availability.
+                    </p>
+                </div>
+
+                <div class="contact-card" style="background: linear-gradient(135deg, rgba(0, 112, 184, 0.05), rgba(0, 168, 255, 0.05)); border: 1px solid rgba(0, 112, 184, 0.1); border-radius: 16px; padding: 48px; text-align: center;">
+                    <div class="contact-info" style="display: flex; flex-direction: column; gap: 24px;">
+                        <div class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                            <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--dark); margin-bottom: 4px;">Email Your Resume</h4>
+                                <a href="mailto:careers@kalitc.io" style="color: var(--primary); text-decoration: none; font-size: 1.1rem;">careers@kalitc.io</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                            <i class="fas fa-phone" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--dark); margin-bottom: 4px;">Call Us</h4>
+                                <a href="tel:+16197595900" style="color: var(--primary); text-decoration: none; font-size: 1.1rem;">(619) 759-5900</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                            <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--dark); margin-bottom: 4px;"> headquartered in</h4>
+                                <p style="color: var(--gray); font-size: 1.1rem;">Chula Vista, San Diego County</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(0, 112, 184, 0.1);">
+                        <p style="color: var(--gray); font-style: italic;">
+                            Please include your areas of expertise, certifications, preferred service areas, and availability in your email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom:12px;">
+                        <img src="images/KTC_Logo_1.png" alt="KTC" style="width:38px;height:38px;border-radius:8px;object-fit:cover;">
+                        <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
+                    </a>
+                    <p>Kali Technology Consulting, LLC — your trusted MSP technology consultant, providing enterprise technology solutions from 200+ leading providers.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html">Network &amp; Voice</a></li>
+                        <li><a href="solutions.html">Cloud Computing</a></li>
+                        <li><a href="solutions.html">Cybersecurity</a></li>
+                        <li><a href="solutions.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="partners.html">Our Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-globe" style="margin-right:8px;color:#3399d6;"></i>kalitc.io</li>
+                        <li><i class="fas fa-envelope" style="margin-right:8px;color:#3399d6;"></i>info@kalitc.io</li>
+                        <li><i class="fas fa-phone" style="margin-right:8px;color:#3399d6;"></i>(619) 759-5900</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right:8px;color:#3399d6;"></i>880 Canarios Ct #230<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chula Vista, CA 91910</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partner-portal.html">Partner Portal</a></li>
+                        <li><a href="customer-portal.html">Customer Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2018 Kali Technology Consulting, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

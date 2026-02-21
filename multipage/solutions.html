@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Kali Technology Consulting, LLC</title>
-    <meta name="description" content="Comprehensive technology solutions including Network, UC, Contact Center, Cybersecurity, Cloud, IoT, Managed Services, and SD-WAN.">
+    <title>Solutions | Kali Technology Consulting, LLC</title>
+    <meta name="description" content="Comprehensive technology solutions including MSP services, web development, SEO, M365, hybrid environments, infrastructure, cybersecurity, cloud, and SD-WAN.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,12 @@
     <nav class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="nav-logo">
-                <div class="nav-logo-icon"><i class="fas fa-bolt"></i></div>
+                <img src="images/KTC_Logo_1.png" alt="KTC" style="width:38px;height:38px;border-radius:8px;object-fit:cover;">
                 <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="services.html" class="active">Services</a>
+                <a href="solutions.html" class="active">Solutions</a>
                 <a href="partners.html">Partners</a>
                 <a href="about.html">About</a>
                 <a href="contact.html" class="nav-cta">Contact Us</a>
@@ -44,20 +44,21 @@
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Services</span>
+                <span>Solutions</span>
             </div>
             <h1>Technology Solutions</h1>
-            <p>Comprehensive enterprise solutions across 8 key technology categories, powered by 200+ leading technology providers.</p>
+            <p>Comprehensive enterprise solutions spanning MSP, web development, SEO, cloud, cybersecurity, and infrastructure services backed by 200+ leading providers.</p>
         </div>
     </div>
 
     <!-- Quick Nav -->
-    <section style="background:#0f172a;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:64px;z-index:100;backdrop-filter:blur(20px);">
+    <section class="quick-nav-bar" style="background:#0f172a;padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:64px;z-index:100;backdrop-filter:blur(20px);">
         <div class="container">
-            <div style="display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;justify-content:center;flex-wrap:wrap;">
+            <div style="display:flex;gap:10px;row-gap:10px;padding-bottom:4px;justify-content:center;flex-wrap:wrap;max-width:1120px;margin:0 auto;">
                 <a href="#managed" class="filter-btn active">MSP Services</a>
                 <a href="#reseller" class="filter-btn">Hardware Reseller</a>
                 <a href="#ai" class="filter-btn">AI Development</a>
+                <a href="#web" class="filter-btn">Web &amp; SEO</a>
                 <a href="#network" class="filter-btn">Network &amp; Voice</a>
                 <a href="#uc" class="filter-btn">UC/Collaboration</a>
                 <a href="#cc" class="filter-btn">Contact Center</a>
@@ -76,16 +77,23 @@
                 <div class="about-content reveal-left">
                     <div class="section-badge"><i class="fas fa-server"></i> MSP Services</div>
                     <h2 style="color:#fff;">Managed Service Provider</h2>
-                    <p style="color:#94a3b8;">Kali Technology Consulting, LLC delivers comprehensive managed IT services directly to your business. From 24/7 monitoring and proactive maintenance to strategic IT planning and help desk support — we are your dedicated technology partner, not a middleman.</p>
+                    <p style="color:#94a3b8;">Kali Technology Consulting, LLC delivers comprehensive managed IT services directly to your business. We design and support Microsoft 365, Google Workspace, hybrid environments, local server infrastructure, virtualization platforms (VMware and Proxmox), and layered email security — all backed by proactive support and strategic planning.</p>
                     <div class="service-features" style="margin-top:16px;">
                         <span class="service-feature">24/7 Monitoring</span>
                         <span class="service-feature">Help Desk</span>
+                        <span class="service-feature">Microsoft 365</span>
+                        <span class="service-feature">Google Workspace</span>
+                        <span class="service-feature">Hybrid Environments</span>
+                        <span class="service-feature">Local Servers</span>
+                        <span class="service-feature">VMware / Proxmox</span>
+                        <span class="service-feature">Email Security</span>
                         <span class="service-feature">Network Management</span>
                         <span class="service-feature">Patch Management</span>
                         <span class="service-feature">vCIO / IT Strategy</span>
                         <span class="service-feature">Backup & DR</span>
                         <span class="service-feature">Endpoint Security</span>
                         <span class="service-feature">Cloud Management</span>
+                        <span class="service-feature">Staff Augmentation</span>
                     </div>
                     <div class="about-features" style="margin-top:24px;">
                         <div class="about-feature">
@@ -105,26 +113,86 @@
                 <div class="reveal-right">
                     <div class="hero-card" style="padding:24px;">
                         <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Our MSP Capabilities</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                            <div style="padding:16px;background:rgba(0,112,184,0.1);border-radius:12px;text-align:center;">
-                                <i class="fas fa-desktop" style="font-size:1.5rem;color:#3399d6;margin-bottom:8px;"></i>
-                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Remote & On-Site</div>
-                                <div style="font-size:0.7rem;color:#94a3b8;">Full support coverage</div>
+                        <div class="msp-cap-grid">
+                            <div style="padding:12px;background:rgba(0,112,184,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-desktop" style="font-size:1.1rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Remote &amp; On-Site</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Full support coverage</div>
                             </div>
-                            <div style="padding:16px;background:rgba(14,165,233,0.1);border-radius:12px;text-align:center;">
-                                <i class="fas fa-shield-alt" style="font-size:1.5rem;color:#38bdf8;margin-bottom:8px;"></i>
-                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Security First</div>
-                                <div style="font-size:0.7rem;color:#94a3b8;">Built-in cybersecurity</div>
+                            <div style="padding:12px;background:rgba(14,165,233,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-building" style="font-size:1.1rem;color:#38bdf8;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Microsoft 365</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Tenant &amp; policy admin</div>
                             </div>
-                            <div style="padding:16px;background:rgba(245,158,11,0.1);border-radius:12px;text-align:center;">
-                                <i class="fas fa-chart-line" style="font-size:1.5rem;color:#fbbf24;margin-bottom:8px;"></i>
-                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Strategic IT</div>
-                                <div style="font-size:0.7rem;color:#94a3b8;">vCIO & roadmapping</div>
+                            <div style="padding:12px;background:rgba(14,165,233,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-envelope-open-text" style="font-size:1.1rem;color:#38bdf8;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Google Workspace</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">User &amp; app lifecycle</div>
                             </div>
-                            <div style="padding:16px;background:rgba(16,185,129,0.1);border-radius:12px;text-align:center;">
-                                <i class="fas fa-cloud" style="font-size:1.5rem;color:#34d399;margin-bottom:8px;"></i>
-                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Cloud Managed</div>
-                                <div style="font-size:0.7rem;color:#94a3b8;">Azure, AWS, M365</div>
+                            <div style="padding:12px;background:rgba(16,185,129,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-code-branch" style="font-size:1.1rem;color:#34d399;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Hybrid Environments</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Cloud + on-prem</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(245,158,11,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-server" style="font-size:1.1rem;color:#fbbf24;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Local Servers</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Windows/Linux ops</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(245,158,11,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-cubes" style="font-size:1.1rem;color:#fbbf24;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">VMware</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Virtual clusters</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(245,158,11,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-cube" style="font-size:1.1rem;color:#fbbf24;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Proxmox</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Open-source virtualization</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(239,68,68,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-shield-alt" style="font-size:1.1rem;color:#f87171;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Email Security</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Filtering &amp; anti-phish</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(0,112,184,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-database" style="font-size:1.1rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Backup &amp; DR</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Recovery readiness</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(14,165,233,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-wrench" style="font-size:1.1rem;color:#38bdf8;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Patch Management</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">OS and app updates</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(14,165,233,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-headset" style="font-size:1.1rem;color:#38bdf8;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Help Desk</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Fast end-user support</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(16,185,129,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-network-wired" style="font-size:1.1rem;color:#34d399;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Network Ops</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">LAN/WAN monitoring</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(245,158,11,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-chart-line" style="font-size:1.1rem;color:#fbbf24;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Strategic IT</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">vCIO + project management</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(16,185,129,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-user-plus" style="font-size:1.1rem;color:#34d399;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Staffing Services</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">IT staff augmentation</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(0,112,184,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-cloud" style="font-size:1.1rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Cloud Management</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Azure/GCP operations</div>
+                            </div>
+                            <div style="padding:12px;background:rgba(239,68,68,0.1);border-radius:10px;text-align:center;">
+                                <i class="fas fa-laptop-medical" style="font-size:1.1rem;color:#f87171;margin-bottom:6px;"></i>
+                                <div style="font-size:0.72rem;color:#fff;font-weight:600;">Endpoint Security</div>
+                                <div style="font-size:0.66rem;color:#94a3b8;">Device hardening</div>
                             </div>
                         </div>
                     </div>
@@ -167,42 +235,36 @@
                     </div>
                 </div>
                 <div class="reveal-right">
-                    <div class="service-card" style="padding:24px;">
-                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Our Hardware Partners</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <img src="images/reseller/lenovo.svg" alt="Lenovo" style="height:32px;width:auto;margin-bottom:8px;">
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Lenovo</div>
-                                <div style="font-size:0.7rem;color:#64748b;">ThinkPad, ThinkCentre, Servers</div>
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Our Hardware Partners</h4>
+                        <div class="hw-partner-grid">
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <img src="images/reseller/lenovo.svg" alt="Lenovo" style="height:60px;width:auto;margin:0 auto 10px;">
+                                <div style="font-size:0.7rem;color:#94a3b8;">ThinkPad, ThinkCentre, Servers</div>
                             </div>
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <img src="images/reseller/dell.svg" alt="Dell" style="height:32px;width:auto;margin-bottom:8px;">
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Dell Technologies</div>
-                                <div style="font-size:0.7rem;color:#64748b;">PowerEdge, OptiPlex, Latitude</div>
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <img src="images/reseller/dell.svg" alt="Dell" style="height:60px;width:auto;margin:0 auto 10px;">
+                                <div style="font-size:0.7rem;color:#94a3b8;">PowerEdge, OptiPlex, Latitude</div>
                             </div>
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <img src="images/reseller/hp.svg" alt="HP" style="height:32px;width:auto;margin-bottom:8px;">
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">HP Inc.</div>
-                                <div style="font-size:0.7rem;color:#64748b;">EliteBook, ProDesk, Z Series</div>
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <img src="images/reseller/hp.svg" alt="HP" style="height:60px;width:auto;margin:0 auto 10px;">
+                                <div style="font-size:0.7rem;color:#94a3b8;">EliteBook, ProDesk, Z Series</div>
                             </div>
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <img src="images/reseller/synology.svg" alt="Synology" style="height:32px;width:auto;margin-bottom:8px;">
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Synology</div>
-                                <div style="font-size:0.7rem;color:#64748b;">NAS, Surveillance, Backup</div>
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <img src="images/reseller/synology.svg" alt="Synology" style="height:60px;width:auto;margin:0 auto 10px;">
+                                <div style="font-size:0.7rem;color:#94a3b8;">NAS, Surveillance, Backup</div>
                             </div>
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <img src="images/reseller/ingram-micro.svg" alt="Ingram Micro" style="height:32px;width:auto;margin-bottom:8px;">
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">Ingram Micro</div>
-                                <div style="font-size:0.7rem;color:#64748b;">Full IT Distribution</div>
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:center;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <img src="images/reseller/ingram-micro.svg" alt="Ingram Micro" style="height:56px;width:auto;margin:0 auto 10px;">
+                                <div style="font-size:0.7rem;color:#94a3b8;">Full IT Distribution</div>
                             </div>
-                            <div style="padding:16px;background:#f8fafc;border:1px solid rgba(0,0,0,0.08);border-radius:12px;text-align:center;transition:all 0.3s ease;" onmouseover="this.style.background='#ffffff'; this.style.borderColor='rgba(0,112,184,0.3)'" onmouseout="this.style.background='#f8fafc'; this.style.borderColor='rgba(0,0,0,0.08)'">
-                                <div style="display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:8px;">
-                                    <img src="images/reseller/cisco.svg" alt="Cisco" style="height:24px;width:auto;">
-                                    <img src="images/reseller/meraki.svg" alt="Meraki" style="height:24px;width:auto;">
-                                    <img src="images/reseller/ubiquiti.svg" alt="Ubiquiti" style="height:24px;width:auto;">
+                            <div style="padding:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;text-align:center;transition:all 0.3s ease;min-height:118px;display:flex;flex-direction:column;justify-content:space-between;" onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:8px;">
+                                    <img src="images/reseller/cisco.svg" alt="Cisco" style="height:36px;width:auto;">
+                                    <img src="images/reseller/meraki.svg" alt="Meraki" style="height:36px;width:auto;">
+                                    <img src="images/reseller/ubiquiti.svg" alt="Ubiquiti" style="height:36px;width:auto;">
                                 </div>
-                                <div style="font-size:0.85rem;color:#0f172a;font-weight:600;">+ More</div>
-                                <div style="font-size:0.7rem;color:#64748b;">Cisco, Meraki, Ubiquiti, APC</div>
+                                <div style="font-size:0.85rem;color:#fff;font-weight:600;margin-top:16px;">+ More</div>
                             </div>
                         </div>
                     </div>
@@ -269,8 +331,72 @@
         </div>
     </section>
 
+    <!-- Web Development & SEO -->
+    <section class="section" style="background:#fff;" id="web">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left" style="order:1;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Web &amp; SEO Capabilities</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                            <div style="padding:14px;background:rgba(0,112,184,0.15);border-radius:12px;text-align:center;">
+                                <i class="fas fa-palette" style="font-size:1.2rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Brand-Ready Design</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Modern responsive UI/UX</div>
+                            </div>
+                            <div style="padding:14px;background:rgba(0,112,184,0.15);border-radius:12px;text-align:center;">
+                                <i class="fas fa-bolt" style="font-size:1.2rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Speed Optimization</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Core Web Vitals tuning</div>
+                            </div>
+                            <div style="padding:14px;background:rgba(0,112,184,0.15);border-radius:12px;text-align:center;">
+                                <i class="fas fa-search" style="font-size:1.2rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">SEO Implementation</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Technical + on-page SEO</div>
+                            </div>
+                            <div style="padding:14px;background:rgba(0,112,184,0.15);border-radius:12px;text-align:center;">
+                                <i class="fas fa-chart-line" style="font-size:1.2rem;color:#3399d6;margin-bottom:6px;"></i>
+                                <div style="font-size:0.8rem;color:#fff;font-weight:600;">Growth Reporting</div>
+                                <div style="font-size:0.7rem;color:#94a3b8;">Leads, traffic, conversions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right" style="order:2;">
+                    <div class="section-badge" style="background:rgba(0,112,184,0.1);border-color:rgba(0,112,184,0.2);color:#0070b8;"><i class="fas fa-code"></i> Web Development &amp; SEO</div>
+                    <h2>Websites That Rank and Convert</h2>
+                    <p>We design and build fast, secure, and conversion-focused websites, then support them with technical SEO and digital growth strategy. From redesigns to new builds, we help your business get found, look credible, and generate qualified leads.</p>
+                    <div class="service-features" style="margin-top:16px;">
+                        <span class="service-feature">Website Design</span>
+                        <span class="service-feature">Custom Web Development</span>
+                        <span class="service-feature">Technical SEO</span>
+                        <span class="service-feature">On-Page SEO</span>
+                        <span class="service-feature">Local SEO</span>
+                        <span class="service-feature">Performance Optimization</span>
+                        <span class="service-feature">Analytics & Reporting</span>
+                        <span class="service-feature">Ongoing Maintenance</span>
+                    </div>
+                    <div class="about-features" style="margin-top:24px;">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Built for Business Outcomes</h4><p>Pages structured to support lead generation, appointment booking, and sales conversations.</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Search Visibility Focus</h4><p>SEO-first architecture, metadata, schema, and content alignment that improve discoverability.</p></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-check"></i></div>
+                            <div><h4>Managed Like an MSP Service</h4><p>We monitor uptime, performance, and security so your website remains stable and effective.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Network & Voice -->
-    <section class="section" style="background:#fff;" id="network">
+    <section class="section section-dark" id="network">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content reveal-left">
@@ -302,9 +428,9 @@
                     </div>
                 </div>
                 <div class="reveal-right">
-                    <div style="padding:24px;background:rgba(0,112,184,0.03);border:1px solid rgba(0,112,184,0.1);border-radius:16px;">
-                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured Network Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Network Providers</h4>
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424271321-35LSY39INB559HIKDIA6/att_biz_hz_alt_4cp_pos.gif" alt="AT&amp;T"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561438893325-L9MC2NCAF74U2B95BEA9/comcast_business.png" alt="Comcast"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437053538-F6CNBUKZ3N9U69KSEN0F/avant-Verizon-logo_1.png" alt="Verizon"></div>
@@ -319,13 +445,13 @@
     </section>
 
     <!-- UC & Collaboration -->
-    <section class="section section-dark" id="uc">
+    <section class="section" style="background:#fff;" id="uc">
         <div class="container">
             <div class="about-grid">
                 <div class="reveal-left" style="order:1;">
                     <div class="hero-card" style="padding:24px;">
                         <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured UC Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425795331-W4T3AQQ0ENDLR15SWLB7/RingCentral.gif" alt="RingCentral"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424802043-ZFZCCGOU0XGLK2KKI2TF/Dialpad_Navy.gif" alt="Dialpad"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425944671-N3H3UIKVT8G6E84DXJJY/VONAGE.gif" alt="Vonage"></div>
@@ -362,7 +488,7 @@
     </section>
 
     <!-- Contact Center -->
-    <section class="section" style="background:#fff;" id="cc">
+    <section class="section section-dark" id="cc">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content reveal-left">
@@ -379,9 +505,9 @@
                     </div>
                 </div>
                 <div class="reveal-right">
-                    <div style="padding:24px;background:rgba(245,158,11,0.03);border:1px solid rgba(245,158,11,0.1);border-radius:16px;">
-                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured CC Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured CC Providers</h4>
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965447-2HID0HNX4EMMGN9IBLDJ/Five9_logo_primary_RGB220.gif" alt="Five9"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425746788-3ZGA16Y4154X6RDFUC6I/NICE_inContact.gif" alt="NICE"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561428786704-ZYBGZU74KC03PLJ3CU3N/avant-Genesys-logo_1.png" alt="Genesys"></div>
@@ -396,13 +522,13 @@
     </section>
 
     <!-- Cybersecurity -->
-    <section class="section section-dark" id="security">
+    <section class="section" style="background:#fff;" id="security">
         <div class="container">
             <div class="about-grid">
                 <div class="reveal-left" style="order:1;">
                     <div class="hero-card" style="padding:24px;">
                         <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Security Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561435111880-UVGVG5G0UMJSC8XGWTU9/AVANT-Trustwave-Logo-Template.png" alt="Trustwave"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561426497081-CFTJK46KAFGC5TUSC23Q/AVANT-Alert-Logic-Logo-Template.png" alt="Alert Logic"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425821864-2FSLIT6MT44NG5NRFSPU/SkOUT_tagline_rgb_300ppi.gif" alt="SkOUT"></div>
@@ -430,7 +556,7 @@
     </section>
 
     <!-- Cloud Computing -->
-    <section class="section" style="background:#fff;" id="cloud">
+    <section class="section section-dark" id="cloud">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content reveal-left">
@@ -447,9 +573,9 @@
                     </div>
                 </div>
                 <div class="reveal-right">
-                    <div style="padding:24px;background:rgba(14,165,233,0.03);border:1px solid rgba(14,165,233,0.1);border-radius:16px;">
-                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured Cloud Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Cloud Providers</h4>
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425770079-KSIQWZ5ND3PFZOIVWSGL/Rackspace_Wordmark_Red.gif" alt="Rackspace"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424942318-V6A5KRUYFJCUT0NUHWDM/Equinix.gif" alt="Equinix"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424965479-VEMBRFHMA01AJ47OA7V2/flexential-logo.gif" alt="Flexential"></div>
@@ -464,13 +590,13 @@
     </section>
 
     <!-- Mobility & IoT -->
-    <section class="section section-dark" id="iot">
+    <section class="section" style="background:#fff;" id="iot">
         <div class="container">
             <div class="about-grid">
                 <div class="reveal-left" style="order:1;">
                     <div class="hero-card" style="padding:24px;">
                         <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured Mobility Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425901583-CB3TG9FDGZW8OOH1O58P/TMobile.gif" alt="T-Mobile"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425880149-KBE7IZ3I7KJYUC47VRT2/Sprint_PP_HighRes-220.gif" alt="Sprint"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561425821607-49PS6EK79NV9Y6YB8RTF/Sierra-Wireless.gif" alt="Sierra Wireless"></div>
@@ -497,13 +623,13 @@
     </section>
 
     <!-- SD-WAN -->
-    <section class="section" style="background:#fff;" id="sdwan">
+    <section class="section section-dark" id="sdwan">
         <div class="container">
             <div class="about-grid">
                 <div class="reveal-left" style="order:1;">
-                    <div style="padding:24px;background:rgba(0,112,184,0.03);border:1px solid rgba(0,112,184,0.1);border-radius:16px;">
-                        <h4 style="color:#0f172a;margin-bottom:16px;font-size:1rem;">Featured SD-WAN Providers</h4>
-                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+                    <div class="hero-card" style="padding:24px;">
+                        <h4 style="color:#fff;margin-bottom:16px;font-size:1rem;">Featured SD-WAN Providers</h4>
+                        <div class="provider-logo-grid">
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424271300-SL8SEO36K45DU1CWA8Z8/aryaka_logo_220x125.gif" alt="Aryaka"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561424471117-6WR1TKX02Z22FKYMYZ2G/CATO_LOGO_2019.gif" alt="Cato"></div>
                             <div class="partner-logo-card" style="min-height:70px;"><img src="https://images.squarespace-cdn.com/content/v1/5ce84ee63d6d0a000196da4b/1561437128328-3AG623X825R667Z73M2F/viptela.png" alt="Viptela"></div>
@@ -546,25 +672,18 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="nav-logo" style="margin-bottom:12px;">
-                        <div class="nav-logo-icon"><i class="fas fa-bolt"></i></div>
+                        <img src="images/KTC_Logo_1.png" alt="KTC" style="width:38px;height:38px;border-radius:8px;object-fit:cover;">
                         <div class="nav-logo-text">Kali Technology Consulting<span>, LLC</span></div>
                     </a>
                     <p>Kali Technology Consulting, LLC — your trusted MSP technology consultant, providing enterprise technology solutions from 200+ leading providers.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="#network">Network &amp; Voice</a></li>
-                        <li><a href="#cloud">Cloud Computing</a></li>
-                        <li><a href="#security">Cybersecurity</a></li>
-                        <li><a href="#uc">UC &amp; Collaboration</a></li>
-                        <li><a href="#cc">Contact Center</a></li>
-                        <li><a href="#managed">Managed Services</a></li>
+                        <li><a href="solutions.html">Network &amp; Voice</a></li>
+                        <li><a href="solutions.html">Cloud Computing</a></li>
+                        <li><a href="solutions.html">Cybersecurity</a></li>
+                        <li><a href="solutions.html">Managed Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -573,24 +692,87 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="partners.html">Our Partners</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="https://kalitc.io" target="_blank"><i class="fas fa-globe" style="margin-right:8px;color:#3399d6;"></i>kalitc.io</a></li>
-                        <li><a href="mailto:info@kalitc.io"><i class="fas fa-envelope" style="margin-right:8px;color:#3399d6;"></i>info@kalitc.io</a></li>
-                        <li><a href="tel:+16197595900"><i class="fas fa-phone" style="margin-right:8px;color:#3399d6;"></i>(619) 759-5900</a></li>
+                        <li><i class="fas fa-globe" style="margin-right:8px;color:#3399d6;"></i>kalitc.io</li>
+                        <li><i class="fas fa-envelope" style="margin-right:8px;color:#3399d6;"></i>info@kalitc.io</li>
+                        <li><i class="fas fa-phone" style="margin-right:8px;color:#3399d6;"></i>(619) 759-5900</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right:8px;color:#3399d6;"></i>880 Canarios Ct #230<br><span style="padding-left:24px;">Chula Vista, CA 91910</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="partner-portal.html">Partner Portal</a></li>
+                        <li><a href="customer-portal.html">Customer Portal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Kali Technology Consulting, LLC. All rights reserved.</p>
+                <p>&copy; 2018 Kali Technology Consulting, LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script>animatePageHeader();</script>
+    <script>
+    (function () {
+        // Offset-aware smooth scroll for quick-nav anchor links
+        const quickNav = document.querySelector('.quick-nav-bar');
+        const navbar   = document.querySelector('.navbar');
+
+        function getOffset() {
+            const navH  = navbar  ? navbar.getBoundingClientRect().height  : 64;
+            const qnavH = quickNav ? quickNav.getBoundingClientRect().height : 0;
+            return navH + qnavH + 8;
+        }
+
+        document.querySelectorAll('.quick-nav-bar a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation(); // prevent main.js smooth scroll from also firing
+                const target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                const top = target.getBoundingClientRect().top + window.scrollY - getOffset();
+                window.scrollTo({ top, behavior: 'smooth' });
+            });
+        });
+
+        // Highlight active button as sections scroll into view
+        const sections = ['managed','reseller','ai','web','network','uc','cc','security','cloud','iot','sdwan']
+            .map(id => document.getElementById(id))
+            .filter(Boolean);
+
+        const buttons = document.querySelectorAll('.quick-nav-bar .filter-btn');
+
+        function setActive(id) {
+            buttons.forEach(btn => {
+                const href = btn.getAttribute('href');
+                btn.classList.toggle('active', href === '#' + id);
+            });
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            });
+        }, {
+            rootMargin: '-30% 0px -60% 0px',
+            threshold: 0
+        });
+
+        sections.forEach(s => observer.observe(s));
+    })();
+    </script>
 </body>
 </html>
