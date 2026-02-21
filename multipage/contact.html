@@ -77,28 +77,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- hCaptcha Script -->
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-    
-    <!-- hCaptcha Fallback Script -->
-    <script>
-        window.hcaptchaOnLoad = function() {
-            console.log('hCaptcha loaded successfully');
-        };
-        
-        // Fallback if hCaptcha fails to load
-        setTimeout(function() {
-            if (typeof hcaptcha === 'undefined') {
-                console.log('hCaptcha failed to load, retrying...');
-                var script = document.createElement('script');
-                script.src = 'https://js.hcaptcha.com/1/api.js';
-                script.async = true;
-                script.defer = true;
-                document.head.appendChild(script);
-            }
-        }, 3000);
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -222,12 +200,6 @@
                             <div class="form-group">
                                 <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Tell Us About Your Needs</label>
                                 <textarea name="message" placeholder="Describe your current challenges, goals, or specific requirements..." rows="4" style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem; resize: vertical;"></textarea>
-                            </div>
-
-                            <!-- hCaptcha Spam Protection -->
-                            <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
-                                <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Verify You're Human *</label>
-                                <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001" data-captcha="true" style="margin: 0 auto; min-height: 74px; width: 100%; max-width: 303px;"></div>
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
