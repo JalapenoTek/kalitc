@@ -3,8 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Kali Technology Consulting, LLC</title>
-    <meta name="description" content="Contact Kali Technology Consulting, LLC for enterprise technology solutions, quotes, and consultations.">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Contact Kali Technology Consulting | MSP Services San Diego | Free IT Consultation</title>
+    <meta name="description" content="Contact Kali Technology Consulting, LLC in San Diego, CA for free MSP consultation, IT services quotes, and enterprise technology solutions. Call (619) 759-5900 or visit our Chula Vista office.">
+    <meta name="keywords" content="contact MSP San Diego, IT consultation San Diego, managed services provider contact, technology consulting quote, cybersecurity consultation, cloud computing consultation, San Diego IT company, Chula Vista IT services, business IT support contact, enterprise technology solutions, network solutions quote, telecom consulting contact, Microsoft 365 consultation, Azure consulting, AWS cloud consultation, IT infrastructure assessment, disaster recovery consultation">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Kali Technology Consulting | MSP Services San Diego | Free IT Consultation">
+    <meta property="og:description" content="Contact Kali Technology Consulting, LLC in San Diego, CA for free MSP consultation, IT services quotes, and enterprise technology solutions. Call (619) 759-5900 or visit our Chula Vista office.">
+    <meta property="og:image" content="https://www.kalitc.io/images/KTC_Logo_1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.kalitc.io/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kali Technology Consulting, LLC">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Kali Technology Consulting | MSP Services San Diego | Free IT Consultation">
+    <meta name="twitter:description" content="Contact Kali Technology Consulting, LLC in San Diego, CA for free MSP consultation, IT services quotes, and enterprise technology solutions.">
+    <meta name="twitter:image" content="https://www.kalitc.io/images/KTC_Logo_1.png">
+    <meta name="twitter:site" content="@kalitc">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="author" content="Kali Technology Consulting, LLC">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.kalitc.io/contact.html">
+    
+    <!-- Structured Data - Contact Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Kali Technology Consulting, LLC",
+      "description": "Contact Kali Technology Consulting, LLC in San Diego, CA for free MSP consultation, IT services quotes, and enterprise technology solutions.",
+      "url": "https://www.kalitc.io/contact.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "Kali Technology Consulting, LLC",
+        "url": "https://www.kalitc.io",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "880 Canarios Ct #230",
+          "addressLocality": "Chula Vista",
+          "addressRegion": "CA",
+          "postalCode": "91910",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-619-759-5900",
+        "email": "info@kalitc.io",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-619-759-5900",
+          "contactType": "customer service",
+          "email": "info@kalitc.io",
+          "availableLanguage": ["English"],
+          "hoursAvailable": "Mo-Fr 08:00-18:00"
+        }
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +77,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- hCaptcha Script -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -69,37 +136,42 @@
                         <h3 style="color:#fff;font-size:1.5rem;margin-bottom:8px;">Request a Free Consultation</h3>
                         <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:24px;">Fill out the form below and one of our technology consultants will reach out within 24 hours.</p>
                         
-                        <form class="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                            <input type="hidden" name="access_key" value="0dc918e7-f414-46db-8a60-1c3d22610fdf">
+                            <input type="hidden" name="subject" value="New Contact Form Submission from Kali Technology Consulting">
+                            <input type="hidden" name="from_name" value="Kali Technology Consulting Website">
+                            <input type="hidden" name="redirect" value="https://www.kalitc.io/thank-you.html">
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">First Name *</label>
-                                    <input type="text" placeholder="John" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                    <input type="text" name="firstName" placeholder="John" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                 </div>
                                 <div class="form-group">
                                     <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Last Name *</label>
-                                    <input type="text" placeholder="Smith" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                    <input type="text" name="lastName" placeholder="Smith" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                 </div>
                             </div>
 
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
                                 <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Business Email *</label>
-                                <input type="email" placeholder="john@company.com" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                <input type="email" name="email" placeholder="john@company.com" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
                                     <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Company Name *</label>
-                                    <input type="text" placeholder="Acme Corp" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                    <input type="text" name="company" placeholder="Acme Corp" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                 </div>
                                 <div class="form-group">
                                     <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Phone Number</label>
-                                    <input type="tel" placeholder="+1 (555) 000-0000" style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                 </div>
                             </div>
 
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
                                 <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Solution Interest *</label>
-                                <select required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                <select name="solution" required style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                     <option value="" disabled selected>Select a solution category</option>
                                     <option value="network">Network & Voice</option>
                                     <option value="uc">UC & Collaboration</option>
@@ -118,7 +190,7 @@
 
                             <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
                                 <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Number of Employees</label>
-                                <select style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
+                                <select name="employees" style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem;">
                                     <option value="" disabled selected>Select company size</option>
                                     <option value="1-50">1-50</option>
                                     <option value="51-200">51-200</option>
@@ -129,8 +201,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Tell Us About Your Needs</label>
-                                <textarea placeholder="Describe your current challenges, goals, or specific requirements..."></textarea>
+                                <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Tell Us About Your Needs</label>
+                                <textarea name="message" placeholder="Describe your current challenges, goals, or specific requirements..." rows="4" style="padding: 14px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; font-size: 0.95rem; resize: vertical;"></textarea>
+                            </div>
+
+                            <!-- hCaptcha Spam Protection -->
+                            <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                                <label style="color: #94a3b8; font-size: 0.9rem; font-weight: 500;">Verify You're Human *</label>
+                                <div class="h-captcha" data-captcha="true" style="margin: 0 auto; min-height: 74px;"></div>
                             </div>
 
                             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">

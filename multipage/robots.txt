@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.kalitc.io/sitemap.xml
+
+# Allow search engines to crawl all important files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block crawling of development/temporary files if any exist
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
