@@ -80,76 +80,23 @@
         </div>
     </nav>
 
-    <!-- Thank You Hero Section -->
-    <section class="hero" role="main">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <i class="fas fa-check-circle"></i> Request Successfully Submitted
-                    </div>
-                    <h1>Thank You for Contacting <span style="color:#3399d6;">Kali Technology Consulting</span></h1>
-                    <p>
-                        Your consultation request has been successfully received. Our team of technology consultants 
-                        will review your information and contact you within 24 hours to discuss your specific needs 
-                        and how we can help transform your technology infrastructure.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="index.html" class="btn btn-primary">
-                            <i class="fas fa-home"></i> Back to Home
-                        </a>
-                        <a href="solutions.html" class="btn btn-secondary">
-                            <i class="fas fa-th-large"></i> Explore Solutions
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="hero-card" style="padding: 40px; text-align: center;">
-                        <div style="margin-bottom: 24px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                <i class="fas fa-check" style="font-size: 2rem; color: #fff;"></i>
-                            </div>
-                            <h3 style="color:#fff;font-size:1.3rem;margin-bottom:12px;">What Happens Next?</h3>
-                        </div>
-
-                        <div style="display: flex; flex-direction: column; gap: 16px; text-align: left;">
-                            <div style="display: flex; align-items: start; gap: 12px;">
-                                <div style="min-width: 24px; height: 24px; background: rgba(16,185,129,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-                                    <i class="fas fa-envelope" style="font-size: 0.7rem; color: #10b981;"></i>
-                                </div>
-                                <div>
-                                    <div style="font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 4px;">Confirmation Email</div>
-                                    <div style="font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">You'll receive a confirmation email with your request details.</div>
-                                </div>
-                            </div>
-                            
-                            <div style="display: flex; align-items: start; gap: 12px;">
-                                <div style="min-width: 24px; height: 24px; background: rgba(16,185,129,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-                                    <i class="fas fa-user-tie" style="font-size: 0.7rem; color: #10b981;"></i>
-                                </div>
-                                <div>
-                                    <div style="font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 4px;">Expert Consultation</div>
-                                    <div style="font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">A technology consultant will reach out within 24 hours.</div>
-                                </div>
-                            </div>
-                            
-                            <div style="display: flex; align-items: start; gap: 12px;">
-                                <div style="min-width: 24px; height: 24px; background: rgba(16,185,129,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
-                                    <i class="fas fa-lightbulb" style="font-size: 0.7rem; color: #10b981;"></i>
-                                </div>
-                                <div>
-                                    <div style="font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 4px;">Custom Solutions</div>
-                                    <div style="font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">We'll provide tailored recommendations for your business.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="hero-grid"></div>
+        <div class="hero-bg-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
         </div>
-    </section>
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Thank You</span>
+            </div>
+            <h1>Thank You For Your Interest</h1>
+            <p>Your consultation request has been successfully received</p>
+        </div>
+    </div>
 
     <!-- Additional Information Section -->
     <section class="section section-dark">
@@ -161,32 +108,75 @@
                     from managed services to cybersecurity and cloud computing.
                 </p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 40px;">
-                    <div class="hero-card" style="padding: 24px; text-align: center;">
-                        <i class="fas fa-server" style="font-size: 2rem; color: #3399d6; margin-bottom: 16px;"></i>
-                        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">Managed Services</h3>
-                        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.5;">24/7 monitoring, support, and strategic IT planning for your business.</p>
+                <!-- Auto-Scrolling Services Carousel -->
+                <div style="position: relative; overflow: hidden; margin: 0 auto 40px auto; border-radius: 12px; max-width: 400px;">
+                    <div id="servicesCarousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+                        <!-- Service 1 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(51,153,214,0.1), rgba(51,153,214,0.05)); border: 1px solid rgba(51,153,214,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-server" style="font-size: 3rem; color: #3399d6; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Managed Services</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">24/7 monitoring, support, and strategic IT planning for your business with proactive maintenance and help desk support.</p>
+                        </div>
+                        
+                        <!-- Service 2 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(16,185,129,0.05)); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-shield-alt" style="font-size: 3rem; color: #10b981; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Cybersecurity</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Advanced security solutions including SIEM, SOC, endpoint protection, and zero trust architecture.</p>
+                        </div>
+                        
+                        <!-- Service 3 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(14,165,233,0.1), rgba(14,165,233,0.05)); border: 1px solid rgba(14,165,233,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-cloud" style="font-size: 3rem; color: #0ea5e9; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Cloud Computing</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Multi-cloud strategies with AWS, Azure, and GCP expertise including migration and optimization.</p>
+                        </div>
+                        
+                        <!-- Service 4 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(234,88,12,0.1), rgba(234,88,12,0.05)); border: 1px solid rgba(234,88,12,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-network-wired" style="font-size: 3rem; color: #fb923c; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Network & Voice</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Enterprise networking solutions including SD-WAN, MPLS, fiber, and VoIP services.</p>
+                        </div>
+                        
+                        <!-- Service 5 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(59,130,246,0.05)); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-comments" style="font-size: 3rem; color: #3b82f6; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">UC & Collaboration</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Unified communications platforms with voice, video, messaging, and collaboration tools.</p>
+                        </div>
+                        
+                        <!-- Service 6 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(245,158,11,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-headset" style="font-size: 3rem; color: #fbbf24; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Contact Center</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Cloud-based contact center solutions with AI-powered routing and omnichannel support.</p>
+                        </div>
+                        
+                        <!-- Service 7 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(168,85,247,0.05)); border: 1px solid rgba(168,85,247,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-robot" style="font-size: 3rem; color: #a855f7; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">AI & Automation</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Custom AI agents, automation pipelines, and workflow engineering solutions.</p>
+                        </div>
+                        
+                        <!-- Service 8 -->
+                        <div class="service-slide" style="min-width: 100%; padding: 40px 30px; background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(34,197,94,0.05)); border: 1px solid rgba(34,197,94,0.2); border-radius: 12px; text-align: center;">
+                            <i class="fas fa-microchip" style="font-size: 3rem; color: #22c55e; margin-bottom: 20px;"></i>
+                            <h3 style="color:#fff;font-size:1.5rem;margin-bottom:12px;">Mobility & IoT</h3>
+                            <p style="color:#94a3b8;font-size:1rem;line-height:1.6;max-width: 500px;margin: 0 auto;">Next-generation mobility solutions, IoT connectivity, and 5G network integration.</p>
+                        </div>
                     </div>
                     
-                    <div class="hero-card" style="padding: 24px; text-align: center;">
-                        <i class="fas fa-shield-alt" style="font-size: 2rem; color: #10b981; margin-bottom: 16px;"></i>
-                        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">Cybersecurity</h3>
-                        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.5;">Advanced security solutions to protect your business from threats.</p>
-                    </div>
-                    
-                    <div class="hero-card" style="padding: 24px; text-align: center;">
-                        <i class="fas fa-cloud" style="font-size: 2rem; color: #0ea5e9; margin-bottom: 16px;"></i>
-                        <h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px;">Cloud Computing</h3>
-                        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.5;">Multi-cloud strategies with AWS, Azure, and GCP expertise.</p>
+                    <!-- Carousel Indicators -->
+                    <div id="carouselIndicators" style="display: flex; justify-content: center; gap: 8px; margin-top: 20px;">
+                        <!-- Indicators will be added by JavaScript -->
                     </div>
                 </div>
                 
                 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                     <a href="solutions.html" class="btn btn-primary">
                         <i class="fas fa-th-large"></i> View All Solutions
-                    </a>
-                    <a href="tel:+1-619-759-5900" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i> Call Us Now
                     </a>
                 </div>
             </div>
@@ -246,5 +236,116 @@
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- Auto-Scrolling Carousel Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('servicesCarousel');
+            const indicators = document.getElementById('carouselIndicators');
+            const slides = carousel.querySelectorAll('.service-slide');
+            let currentSlide = 0;
+            let autoplayInterval;
+            
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.style.cssText = `
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: ${index === 0 ? '#3399d6' : 'rgba(255,255,255,0.3)'};
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                `;
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicators.appendChild(indicator);
+            });
+            
+            function updateIndicators() {
+                const indicatorElements = indicators.children;
+                for (let i = 0; i < indicatorElements.length; i++) {
+                    indicatorElements[i].style.background = i === currentSlide ? '#3399d6' : 'rgba(255,255,255,0.3)';
+                }
+            }
+            
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                const offset = -slideIndex * 100;
+                carousel.style.transform = `translateX(${offset}%)`;
+                updateIndicators();
+                resetAutoplay();
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                goToSlide(currentSlide);
+            }
+            
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+            }
+            
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+            
+            // Pause on hover
+            carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            carousel.addEventListener('mouseleave', startAutoplay);
+            
+            // Touch support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                clearInterval(autoplayInterval);
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoplay();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swipe left - next slide
+                        nextSlide();
+                    } else {
+                        // Swipe right - previous slide
+                        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                        goToSlide(currentSlide);
+                    }
+                }
+            }
+            
+            // Start autoplay
+            startAutoplay();
+            
+            // Responsive adjustments
+            function adjustForMobile() {
+                if (window.innerWidth <= 768) {
+                    // Adjustments for mobile
+                    slides.forEach(slide => {
+                        slide.style.padding = '30px 20px';
+                    });
+                } else {
+                    // Reset for desktop
+                    slides.forEach(slide => {
+                        slide.style.padding = '40px';
+                    });
+                }
+            }
+            
+            adjustForMobile();
+            window.addEventListener('resize', adjustForMobile);
+        });
+    </script>
 </body>
 </html>
